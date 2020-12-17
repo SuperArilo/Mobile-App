@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		.mui-col-xs-2
+		{
+			float: left;
+		}
+		.mui-col-xs-4
+		{
+			width: 33.33%;
+			height: 18vw;
+			float: left;
+		}
+		body
+		{
+			text-align: center;
+		}
+		.div_book_title_box
+		{
+			width: 100%;
+			height: 12vw;
+			float: left;
+			line-height: 12vw;
+		}
+		.div_book_Publication_time_box
+		{
+			width: 100%;
+			height: 8vw;
+			float: left;
+			line-height: 8vw;
+		}
+		.div_book_show_div
+		{
+			width: 48%;
+			height: 65vw;
+			float: left;
+			margin-left: 26%;
+			margin-top: 5vw;
+			border-radius: 3vw;
+			box-shadow: 5vw 5vw 0 #DDDDDD;
+		}
+		.div_book_show_picture_style
+		{
+			max-width: 100%;
+			height: 100%;
+			width: 100%;
+			border-radius: 3vw;
+		}
+		.div_book_title_book_name_box
+		{
+			width: 100%;
+			height: 12vw;
+			float: left;
+			margin-top: 10vw;
+			line-height: 12vw;
+		}
+		.div_book_title_book_author_box
+		{
+			width: 100%;
+			height: 7vw;
+			float: left;
+			line-height: 7vw;
+			margin-top: 2vw;
+		}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav" style="box-shadow: 0px 0px 0px;background-color:transparent;" id="heardermylab">
+			<span class="mui-action-back mui-icon mui-icon-left-nav" style="float: left;"></span>
+		</header>
+		<div class="mui-content">
+			<div class="div_book_title_box">
+				<span style="font-size: 6vw;">《</span><span style="font-size: 6vw;padding: 0vw 2vw 0 2vw;font-weight: 700;">红岩</span><span style="font-size: 6vw;">》</span>
+			</div>
+			<div class="div_book_Publication_time_box">
+				<p style="font-size: 4vw;padding: 0;margin: 0;">出版时间1961年12月</p>
+			</div>
+			<div class="div_book_show_div">
+				<img src="../../Picture/shuji8.jpg" class="div_book_show_picture_style"/>
+			</div>
+			<div style="width: 80%;height: 18vw;float: left;margin-left: 10%;margin-top: 18vw;">
+				<div class="row">
+					<div class="mui-col-xs-4">
+						<img src="../../icon/Collection.png" style="max-width: 100%;height: 18vw;"/>
+					</div>
+					<div class="mui-col-xs-4">
+						<img src="../../icon/User_Talk.png" style="max-width: 100%;height: 18vw;"/>
+					</div>
+					<div class="mui-col-xs-4">
+						<img src="../../icon/edit.png" style="max-width: 100%;height: 18vw;"/>
+					</div>
+				</div>
+			</div>
+			<div class="div_book_title_book_name_box">
+				<p style="color: #000000;font-size: 5vw;font-weight: 700;">原著《在烈火中永生》</p>
+			</div>
+			<div class="div_book_title_book_author_box">
+				<p style="font-size: 3.5vw;color:#808080;">罗广斌、杨益言</p>
+			</div>
+			<div style="width: 40%;height: 6.5vw;float: left;margin-left: 30%;margin-top: 2vw;">
+				<div class="row">
+					<div class="mui-col-xs-2">
+						<img src="../../icon/Star_full.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+					</div>
+					<div class="mui-col-xs-2">
+						<img src="../../icon/Star_full.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+					</div>
+					<div class="mui-col-xs-2">
+						<img src="../../icon/Star_full.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+					</div>
+					<div class="mui-col-xs-2">
+						<img src="../../icon/Star_full.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+					</div>
+					<div class="mui-col-xs-2">
+						<img src="../../icon/Star_full.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+					</div>
+					<div class="mui-col-xs-2">
+						<img src="../../icon/Star_em.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%;height: 39.2vw;float: left;margin-top: 2vw;">
+				<p style="font-size: 2.5vw;margin-top: 2vw;">《红岩》描写人民解放军进军大西南的形势下,</p>
+				<p style="font-size: 2.5vw;margin-top: 2vw;">重庆的国民党当局疯狂镇压共产党领导的地下革命斗争。</p>
+				<p style="font-size: 2.5vw;margin-top: 2vw;">着重表现以齐晓轩、许云峰、</p>
+				<p style="font-size: 2.5vw;margin-top: 2vw;">江雪琴等共产党人在狱中所进行的英勇战斗，虽然最后惨遭屠杀...</p>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		mui.plusReady(function() {
+			heardermylab.style.marginTop = plus.navigator.getStatusbarHeight() + 'px';
+			plus.navigator.setStatusBarStyle('dark');
+		});
+	</script>
+</html>

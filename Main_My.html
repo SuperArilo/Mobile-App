@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+	<style>
+		body
+		{
+			background-color: white;
+		}
+		.mui-col-xs-4
+		{
+			float: left;
+		}
+		.div_top_bacground_picture
+		{
+			width: 100%;
+			height: auto;
+			position: absolute;
+			top: 0;
+		}
+		.div_Center_box
+		{
+			position: absolute;
+			width: 100%;
+			height: auto;
+			top: 35vw;
+			background-color: white;
+			border-radius: 6vw 6vw 0 0;
+		}
+		.div_User_box
+		{
+			width: 90%;
+			height: 30vw;
+			float: left;
+			margin-left: 5%;
+		}
+		.div_User_Head_box
+		{
+			width: 20vw;
+			height: 20vw;
+			float: left;
+			margin: 5vw 0 0 5vw;
+		}
+		.div_User_introduce_box
+		{
+			height: 20vw;
+			width: 40vw;
+			float: left;
+			margin: 5vw 0 0 3vw;
+		}
+		.div_User_introduce_Name
+		{
+			width: 100%;
+			height: 8vw;
+			float: left;
+			line-height: 8vw;
+		}
+		.div_User_introduce_autograph
+		{
+			width: 100%;
+			height: 6vw;
+			float: left;
+			line-height: 6vw;
+		}
+		.div_User_introduce_Level
+		{
+			width: 30%;
+			height: 5vw;
+			float: left;
+			line-height: 5vw;
+			margin-top: 0.5vw;
+			text-align: center;
+			border-radius:20vw;
+			background-color: #87CEFA;
+		}
+		.div_follow_box
+		{
+			width: 100%;
+			height: 16vw;
+			float: left;
+		}
+		.div_follow_into_box
+		{
+			width: 100%;
+			height: 8vw;
+			float: left;
+			line-height: 8vw;
+			text-align: center;
+		}
+		.div_follow_into_span_style
+		{
+			font-size: 3.8vw;
+			font-weight: 700;
+		}
+		.div_user_function_box
+		{
+			width: 85%;
+			height: 24vw;
+			float: left;
+			margin-left: 7.5%;
+			margin-top: 5vw;
+			background-color:#FAEBD7;
+			padding-top: 1vw;
+			border-radius: 5vw 5vw 5vw 5vw;
+			box-shadow: 0 0 3vw #808080;
+		}
+		.div_user_function_icon_box
+		{
+			width: 100%;
+			height: 16vw;
+			float: left;
+			line-height: 6vw;
+			text-align: center;
+			padding-top: 1vw;
+		}
+		.div_user_function_span_box
+		{
+			width: 100%;
+			height: 8vw;
+			float: left;
+			text-align: center;
+			line-height: 8vw;
+		}
+		.div_Additional_features_box
+		{
+			width: 90%;
+			height: 72vw;
+			float: left;
+			margin: 8vw 0 8vw 5%;
+			border-radius: 5vw;
+			box-shadow: 0 0 5vw #929292;
+		}
+		.div_Additional_features_icon_box
+		{
+			width: 100%;
+			height: 18vw;
+			float: left;
+			margin-top: 6vw;
+			text-align: center;
+		}
+		.div_Additional_features_span_box
+		{
+			width: 100%;
+			height: 10vw;
+			float: left;
+			text-align: center;
+			line-height: 10vw;
+		}
+		.div_User_box_right_Sgin_in_box
+		{
+			position: absolute;
+			width: 22vw;
+			height: 10vw;
+			right: 0vw;
+			top: 10vw;
+			border-radius: 5vw 0 0 5vw;
+			background-color: white;
+			box-shadow: 0 0 5vw #808080;
+		}
+		.div_User_box_right_Sgin_in_icon_box
+		{
+			width:50%;
+			height: 10vw;
+			float: left;
+			text-align: center;
+			line-height: 10vw;
+		}
+		.div_User_box_right_Sgin_in_span_box
+		{
+			width: 50%;
+			height: 10vw;
+			float: left;
+			line-height: 10vw;
+			text-align: center;
+		}
+		.div_follow_box_right_box
+		{
+			width: 20%;
+			height: 16vw;
+			background-color: white;
+			float: right;
+			margin-right: 3vw;
+			box-shadow: 0 0 5vw #808080;
+			border-radius: 2vw;
+		}
+		.div_follow_box_right_icon_box
+		{
+			width: 100%;
+			height: 10vw;
+			float: left;
+			text-align: center;
+			line-height: 10vw;
+		}
+		.div_follow_box_right_span_box
+		{
+			height: 6vw;
+			width: 100%;
+			float: left;
+			line-height: 6vw;
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="div_top_bacground_picture">
+			<img src="Lunbo/lunbo3.jpg" style="max-width: 100%;"/>
+		</div>
+		<div class="div_Center_box">
+			<div class="div_User_box">
+				<div class="div_User_Head_box">
+					<img src="./Picture/User_Head.jpg" style="max-width: 100;height: 100%;width: 100%;border-radius: 50%;"/>
+				</div>
+				<div class="div_User_introduce_box">
+					<div class="div_User_introduce_Name">
+						<span style="font-size: 4vw;font-weight: 600;">买菜必涨价</span>
+					</div>
+					<div class="div_User_introduce_autograph">
+						<span style="font-size: 2.5vw;font-weight: 500;color: #AAAAAA;">你抓不到我</span>
+					</div>
+					<div class="div_User_introduce_Level">
+						<span style="font-size: 3vw;line-height: 5vw;vertical-align: middle;">五级</span>
+					</div>
+				</div>
+				<div class="div_User_box_right_Sgin_in_box">
+					<div class="div_User_box_right_Sgin_in_icon_box">
+						<img src="icon/Sign%20in.png" style="max-width: 100%;height: 7vw;vertical-align: middle;"/>
+					</div>
+					<div class="div_User_box_right_Sgin_in_span_box">
+						<span style="font-size: 3.5vw;font-weight: 600;color: red;">签到</span>
+					</div>
+				</div>
+			</div>
+			<div class="div_follow_box">
+				<div style="width: 70%;height: 16vw;float: left;">
+					<div class="div_follow_into_box">
+						<div class="row">
+							<div class="mui-col-xs-4">
+								<span class="div_follow_into_span_style">556</span>
+							</div>
+							<div class="mui-col-xs-4">
+								<span class="div_follow_into_span_style">369</span>
+							</div>
+							<div class="mui-col-xs-4">
+								<span class="div_follow_into_span_style">245</span>
+							</div>
+						</div>
+					</div>
+					<div class="div_follow_into_box">
+						<div class="row">
+							<div class="mui-col-xs-4">
+								<span class="div_follow_into_span_style" style="color: red;">关注</span>
+							</div>
+							<div class="mui-col-xs-4">
+								<span class="div_follow_into_span_style" style="color: red;">粉丝</span>
+							</div>
+							<div class="mui-col-xs-4">
+								<span class="div_follow_into_span_style" style="color: red;">红友</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="div_follow_box_right_box">
+					<div class="div_follow_box_right_icon_box">
+						<img src="icon/wallet.png" style="max-width: 100%;height: 8vw;vertical-align: middle;"/>
+					</div>
+					<div class="div_follow_box_right_span_box">
+						<span style="font-size: 3vw;">智能钱包</span>
+					</div>
+				</div>
+			</div>
+			<div class="div_user_function_box">
+				<div class="div_user_function_icon_box">
+					<div class="row">
+						<div class="mui-col-xs-4" id="my_collection">
+							<img src="icon/my%20collection.png" style="height: 14vw;max-width: 100%;"/>
+						</div>
+						<div class="mui-col-xs-4" id="my_new">
+							<img src="icon/My%20activity.png" style="height: 14vw;max-width: 100%;"/>
+						</div>
+						<div class="mui-col-xs-4" id="my_bookshelf">
+							<img src="icon/My%20bookshelf.png" style="height: 14vw;max-width: 100%;"/>
+						</div>
+					</div>
+				</div>
+				<div class="div_user_function_span_box">
+					<div class="row">
+						<div class="mui-col-xs-4">
+							<span style="font-size: 3.5vw;font-weight: 600;">我的收藏</span>
+						</div>
+						<div class="mui-col-xs-4">
+							<span style="font-size: 3.5vw;font-weight: 600;">我的动态</span>
+						</div>
+						<div class="mui-col-xs-4">
+							<span style="font-size: 3.5vw;font-weight: 600;">我的书架</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="div_Additional_features_box">
+				<div class="div_Additional_features_icon_box">
+					<div class="row">
+						<div class="mui-col-xs-4">
+							<img src="icon/Column%20management.png" style="max-width: 100%;height: 16vw;"/>
+						</div>
+						<div class="mui-col-xs-4">
+							<img src="icon/Focus%20on%20consultation.png" style="max-width: 100%;height: 16vw;"/>
+						</div>
+						<div class="mui-col-xs-4">
+							<img src="icon/My%20information.png" style="max-width: 100%;height: 16vw;"/>
+						</div>
+					</div>
+				</div>
+				<div class="div_Additional_features_span_box">
+					<div class="row">
+						<div class="mui-col-xs-4">
+							<span style="font-size: 3.5vw;font-weight: 600;">专栏管理</span>
+						</div>
+						<div class="mui-col-xs-4">
+							<span style="font-size: 3.5vw;font-weight: 600;">关注咨询</span>
+						</div>
+						<div class="mui-col-xs-4">
+							<span style="font-size: 3.5vw;font-weight: 600;">我的资料</span>
+						</div>
+					</div>
+				</div>
+				<div class="div_Additional_features_icon_box">
+					<div class="row">
+						<div class="mui-col-xs-4">
+							<img src="icon/Historical%20view.png" style="max-width: 100%;height: 16vw;"/>
+						</div>
+						<div class="mui-col-xs-4" id="My_feedback">
+							<img src="icon/Help%20feedback.png" style="max-width: 100%;height: 16vw;"/>
+						</div>
+						<div class="mui-col-xs-4" id="Security_Center">
+							<img src="icon/Security%20Center.png" style="max-width: 100%;height: 16vw;"/>
+						</div>
+					</div>
+				</div>
+				<div class="div_Additional_features_span_box">
+					<div class="row">
+						<div class="mui-col-xs-4">
+							<span style="font-size: 3.5vw;font-weight: 600;">历史回访</span>
+						</div>
+						<div class="mui-col-xs-4">
+							<span style="font-size: 3.5vw;font-weight: 600;">帮助反馈</span>
+						</div>
+						<div class="mui-col-xs-4">
+							<span style="font-size: 3.5vw;font-weight: 600;">安全中心</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		mui.plusReady(function () {
+		    document.getElementById('my_bookshelf').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_My/my_bookshelf.html',
+					id:'Main_My/my_bookshelf.html',
+				});
+			});
+			document.getElementById('my_new').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_My/my_new.html',
+					id:'Main_My/my_new.html',
+				});
+			});
+			document.getElementById('my_collection').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_My/my_collection.html',
+					id:'Main_My/my_collection.html',
+				});
+			});
+			document.getElementById('Security_Center').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_My/Security_Center.html',
+					id:'Main_My/Security_Center.html',
+				});
+			});
+			document.getElementById('My_feedback').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_My/My_feedback.html',
+					id:'Main_My/My_feedback.html',
+				});
+			});
+		});
+	</script>
+</html>

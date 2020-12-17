@@ -1,0 +1,406 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		.mui-plus-pullrefresh .mui-scroll 
+		{
+		    position: absolute;
+		    width: 100%;
+		}
+		.mui-col-xs-4
+		{
+			float: left;
+			text-align: center;
+		}
+		.mui-content
+		{
+			position: relative;
+		}
+		body
+		{
+			background-color: white;
+		}
+		.hidden_div
+		{
+			width: 60%;
+			height: 8vw;
+			float: left;
+			background-color: #E62557;
+			border-radius: 5vw;
+			line-height: 8vw;
+			text-align: center;
+			position: relative;
+			margin-left: 20%;
+			margin-top: 2vw;
+			top: 0vw;
+		}
+		.appear
+		{
+			animation: appear 0.6s;
+		}
+		@keyframes appear
+		{
+			from{top: -10vw;}
+			to{top: 0vw;}
+		}
+		.disappear
+		{
+			animation: disappear 0.8s;
+		}
+		@keyframes disappear{
+			from{top: 0vw;}
+			to{top: -10vw;}
+		}
+		.mui_content_frames_appear
+		{
+			animation: content_frames_appear 0.6s;
+		}
+		@keyframes content_frames_appear
+		{
+			from{top: -10vw;}
+			to{top: -0vw;}
+		}
+		.mui_content_frames_disappear
+		{
+			animation: content_frames_disappear 0.8s;
+		}
+		@keyframes content_frames_disappear
+		{
+			from{top: 0vw;}
+			to{top: -10vw;}
+		}
+		.div_current_book_box
+		{
+			width: 100%;
+			height: 56vw;
+			float: left;
+			margin-top: 2vw;
+		}
+		.div_current_book_content
+		{
+			width: 95%;
+			height: 36vw;
+			top: 18vw;
+			position: relative;
+			left: 2.5%;
+			border-radius: 3vw;
+			box-shadow: 0 0 3vw #808080;
+		}
+		.div_current_book_show_box
+		{
+			width: 28%;
+			height: 42vw;
+			position: relative;
+			bottom: 26vw;
+			left: 8%;
+		}
+		.div_current_book_content_right_box
+		{
+			float:right;
+			width: 60%;
+			height: 36vw;
+		}
+		.div_current_book_content_right_title
+		{
+			width: 100%;
+			height: 15vw;
+			float: left;
+			line-height: 15vw;
+			text-align: left;
+		}
+		.div_current_book_content_right_progressbar
+		{
+			width: 100%;
+			height: 10vw;
+			float: left;
+			line-height: 10vw;
+		}
+		.right_progressbar_style
+		{
+			width: 70%;
+			height: 2vw;
+			margin-top: 4vw;
+			border-radius: 1vw;
+			float: left;
+		}
+		.div_current_book_content_right_progressbar_span
+		{
+			width: 25%;
+			height: 10vw;
+			float: right;
+			line-height: 10vw;
+			text-align: left;
+		}
+		.div_current_book_content_right_buttom
+		{
+			width: 100%;
+			height: 11vw;
+			float: left;
+			line-height: 11vw;
+		}
+		.right_buttom_style
+		{
+			width: 40%;
+			height: 8vw;
+			margin: 0;padding: 0;margin: 0 0 0 3vw;
+		}
+		.div_book_row_box
+		{
+			width: 95%;
+			height: 56vw;
+			float: left;
+			margin: 5vw 0 0 2.5%;
+		}
+		.div_book_row_picture_box
+		{
+			width: 100%;
+			height: 40vw;
+			float: left;
+			margin-top: 3vw;
+		}
+		.div_book_row_title
+		{
+			width: 100%;
+			height: 6vw;
+			float: left;
+			line-height: 6vw;
+		}
+		.div_book_row_desi
+		{
+			width: 100%;
+			height: 7vw;
+			float: left;
+			line-height: 7vw;
+		}
+		.div_book_row_span_font_style
+		{
+			font-size: 3vw;
+			font-weight: 600;
+		}
+		.div_book_row_picture_box_style
+		{
+			max-width: 100%;
+			height: 40vw;
+			border-radius: 0 3vw 3vw 0;
+		}
+	</style>
+	<body>
+		<div id="refreshContainer" class="mui-scroll-wrapper" style="background-color: white;">
+			<div class="mui-scroll">
+				<div id="hidden_div" class="hidden_div mui-hidden">
+					<span style="font-size: 3.8vw;color: white;">已经同步到书架啦~</span>
+				</div>
+				<div class="mui-content" id="mui_content">
+					<div class="div_current_book_box">
+						<div class="div_current_book_content">
+							<div class="div_current_book_content_right_box">
+								<div class="div_current_book_content_right_title">
+									<span style="font-size: 4.5vw;font-weight: 600;">红军简史与长征精神</span>
+								</div>
+								<div class="div_current_book_content_right_progressbar">
+									<div id="demo1" class="mui-progressbar right_progressbar_style">
+										<span style="background-color: #DD524D;"></span>
+									</div>
+									<div class="div_current_book_content_right_progressbar_span">
+										<span style="font-size: 4vw;">20</span><span style="font-size: 4vw;">%</span>
+									</div>
+								</div>
+								<div class="div_current_book_content_right_buttom">
+									<button type="button" class="mui-btn right_buttom_style"><span>继续阅读</span><span class="mui-icon mui-icon-arrowright"></span></button>
+								</div>
+							</div>
+						</div>
+						<div class="div_current_book_show_box">
+							<img src="../Picture/shuji3.png" style="max-width: 100%;height: 100%;width: 100%;border-radius: 0 2vw 2vw 0;"/>
+						</div>
+					</div>
+					<div class="div_book_row_box">
+						<div class="div_book_row_picture_box">
+							<div class="row">
+								<div class="mui-col-xs-4">
+									<img src="../Picture/shuji2.png" class="div_book_row_picture_box_style"/>
+								</div>
+								<div class="mui-col-xs-4">
+									<img src="../Picture/shuji2.png" class="div_book_row_picture_box_style"/>
+								</div>
+								<div class="mui-col-xs-4">
+									<img src="../Picture/shuji2.png" class="div_book_row_picture_box_style"/>
+								</div>
+							</div>
+						</div>
+						<div class="div_book_row_title">
+							<div class="row">
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">恰同学少年</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">恰同学少年</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">恰同学少年</span>
+								</div>
+							</div>
+						</div>
+						<div class="div_book_row_desi">
+							<div class="row">
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">书生意气，意气勃发</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">书生意气，意气勃发</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">书生意气，意气勃发</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="div_book_row_box">
+						<div class="div_book_row_picture_box">
+							<div class="row">
+								<div class="mui-col-xs-4">
+									<img src="../Picture/shuji2.png" class="div_book_row_picture_box_style"/>
+								</div>
+								<div class="mui-col-xs-4">
+									<img src="../Picture/shuji2.png" class="div_book_row_picture_box_style"/>
+								</div>
+								<div class="mui-col-xs-4">
+									<img src="../Picture/shuji2.png" class="div_book_row_picture_box_style"/>
+								</div>
+							</div>
+						</div>
+						<div class="div_book_row_title">
+							<div class="row">
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">恰同学少年</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">恰同学少年</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">恰同学少年</span>
+								</div>
+							</div>
+						</div>
+						<div class="div_book_row_desi">
+							<div class="row">
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">书生意气，意气勃发</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">书生意气，意气勃发</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">书生意气，意气勃发</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="div_book_row_box">
+						<div class="div_book_row_picture_box">
+							<div class="row">
+								<div class="mui-col-xs-4">
+									<img src="../Picture/shuji2.png" class="div_book_row_picture_box_style"/>
+								</div>
+								<div class="mui-col-xs-4">
+									<img src="../Picture/shuji2.png" class="div_book_row_picture_box_style"/>
+								</div>
+								<div class="mui-col-xs-4">
+									<img src="../Picture/shuji2.png" class="div_book_row_picture_box_style"/>
+								</div>
+							</div>
+						</div>
+						<div class="div_book_row_title">
+							<div class="row">
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">恰同学少年</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">恰同学少年</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">恰同学少年</span>
+								</div>
+							</div>
+						</div>
+						<div class="div_book_row_desi">
+							<div class="row">
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">书生意气，意气勃发</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">书生意气，意气勃发</span>
+								</div>
+								<div class="mui-col-xs-4">
+									<span class="div_book_row_span_font_style">书生意气，意气勃发</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		mui.init({
+			pullRefresh:{
+				container:"#refreshContainer",
+				down:{
+					height : 70,//可选,默认50.触发下拉刷新拖动距离,
+					range : 50, //可选 默认100px,控件可下拉拖拽的范围
+					color : '#2BD009', //可选，默认“#2BD009” 下拉刷新控件颜色
+					style : 'circle',//可选，下拉刷新样式，目前支持原生5+ ‘circle’ 样式
+					auto : false,//可选,默认false.自动下拉刷新一次
+					contentdown:"下拉刷新",
+					contentover:"松开刷新",
+					contentrefresh:"刷新完成",
+					callback:doubleref
+				},
+			}
+		});
+		var hidden_div = document.getElementById('hidden_div');
+		var mui_content = document.getElementById('mui_content');
+		function doubleref()
+		{
+			mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			hidden_div.classList.remove('mui-hidden');
+			hidden_div.classList.add('appear');
+			mui_content.classList.add('mui_content_frames_appear');
+				setTimeout(function(){
+					hidden_div.classList.remove('appear');
+					mui_content.classList.remove('mui_content_frames_appear');
+					disappear();
+				},1000);
+		}
+		// function doubleref()
+		// {
+		// 	mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+		// 	setTimeout(function(){
+		// 		disappear();
+		// 	},1000);
+		// 	hidden_div.classList.remove('mui-hidden');
+		// }
+		function disappear()
+		{
+			hidden_div.classList.add('disappear');
+			mui_content.classList.add('mui_content_frames_disappear');
+			setTimeout(function(){
+				hidden_div.classList.add('mui-hidden');
+				hidden_div.classList.remove('disappear');
+				mui_content.classList.remove('mui_content_frames_disappear');
+			},800);
+		}
+		mui.plusReady(function () {
+		    
+		});
+		mui("#demo1").progressbar({progress:20}).show();
+	</script>
+</html>

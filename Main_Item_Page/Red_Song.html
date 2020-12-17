@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../fonts/index-music_icon/iconfont.css" rel="stylesheet"/>
+		<style type="text/css">
+			body 
+			{
+				margin: 0;
+				padding: 0;
+				background-color: white;
+			}
+			.mui-content 
+			{
+				background-color: white;
+				overflow: hidden;
+				height: 100vh;
+			}
+		</style>
+		<style type="text/css">
+			.top_bar 
+			{
+				background-color: white;
+				height: 12vw;
+				line-height: 12vw;
+				color: #999;
+			}
+			.back_btn 
+			{
+				height: 12vw;
+				width: 10%;
+				text-align: center;
+			}
+			.recommend_bar 
+			{
+				width: 100%;
+				height: auto;
+				display: flex;
+				background-color: white;
+				justify-content: space-between;
+				padding: 0 6vw;
+				margin-bottom: 2vw;
+			}
+			.recommend_text 
+			{
+				width: 100%;
+			}
+			.recommend_icon 
+			{
+				width: 60px;
+				min-width: 60px;
+				height: 80px;
+				overflow: hidden;
+				position: relative;
+			}
+			.recommend_icon img 
+			{
+				position: absolute;
+				width: 60px;
+				height: auto;
+				left: 50%;
+				transform: translate(-50%);
+			}
+			.recommend_title 
+			{
+				font-weight: 800;
+				font-size: 10vw;
+				line-height: 60px;
+			}
+			.recommend_date 
+			{
+				height: 20px;
+				font-size: 14px;
+				color: lightgray;
+			}
+			.recommend_icon img 
+			{
+				width: 80px;
+				height: auto;
+			}
+			.item_content 
+			{
+				height: auto;
+			}
+			.mui-customer-slider 
+			{
+				transform: scale(.9);
+				overflow: visible !important;
+			}
+			.mui-slider-item 
+			{
+				overflow: inherit !important;
+				background-color: white;
+				position: relative;
+				height: 600px !important;
+				width: 100% !important;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.music_card 
+			{
+				position: relative;
+				background-color: white;
+				width: 100%;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				height: 580px;
+				border-radius: 20px;
+				overflow: hidden;
+				box-shadow: 0 0 20px rgba(99, 99, 99, .5);
+			}
+			.music_photo 
+			{
+				position: relative;
+				height: 320px;
+				width: 100%;
+				overflow: hidden;
+			}
+			.music_photo img 
+			{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.music_detail 
+			{
+				padding: 20px;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.music_name 
+			{
+				width: 100%;
+				font-size: 20px;
+				font-weight: 800;
+				margin-bottom: 8px;
+			}
+			.music_composition,.music_describe,.music_likes 
+			{
+				width: 100%;
+				font-size: 14px;
+				margin-bottom: 10px;
+				color: gray;
+			}
+			.play_btn 
+			{
+				height: 70px;
+				width: 70px;
+				position: absolute;
+				right: 20px;
+				border-radius: 50px;
+				bottom: 230px;
+				/* background-color: #e62557; */
+				background-color: gray;
+				line-height: 70px;
+				text-align: center;
+				color: white;
+				transition: all .5s;
+			}
+			
+			.play_btn_active 
+			{
+				background-color: #e62557;
+				transition: all .5s;
+			}
+			.play_btn span 
+			{
+				font-size: 40px;
+			}
+			.user_describe 
+			{
+				font-size: 50px;
+				font-weight: 800;
+				display: flex;
+			}
+			.cus_slider_indicator 
+			{
+				bottom: -40px;
+			}
+			.cus_slider_indicator .mui-indicator 
+			{
+				border: none;
+				box-shadow: none;
+				border-radius: 0;
+				transition: all .3s;
+				height: 5px;
+			}
+			.cus_slider_indicator .mui-active 
+			{
+				height: 20px;
+				background-color: #e62557 !important;
+				transition: all .3s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+			<!-- 返回按钮 -->
+			<div class="top_bar" id="heardermylab">
+				<div class="back_btn" id="back-btn">
+					<span class="icon mui-icon mui-icon-arrowleft"></span>
+				</div>
+			</div>
+			<!-- 推荐 -->
+			<div class="recommend_bar">
+				<div class="recommend_text">
+					<div class="recommend_title">推荐</div>
+					<div class="recommend_date">2020年9月27日</div>
+				</div>
+				<div class="recommend_icon">
+					<img src="../icon/Headear.png">
+				</div>
+			</div>
+			<div id="slider" class="mui-slider mui-customer-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div class="music_card">
+							<div class="music_photo">
+								<img src="../Picture/Music_picture.jpg">
+							</div>
+							<div class="play_btn">
+								<span class="iconfont play icon-bofanganniu"></span>
+							</div>
+							<div class="music_detail">
+								<div class="music_name">洪湖水浪打浪</div>
+								<div class="music_composition">作曲家：王玉珍</div>
+								<div class="music_describe">《洪湖水浪打浪》是王玉珍演唱的歌曲，创作于1958年，先是1959年湖北省歌剧团首演的歌剧《洪湖赤卫队》中一个场次的主题曲，1961年歌剧改编成同名电影后成为电影主题曲，很快得到了更大范围的传播。</div>
+								<div class="music_likes">3k人喜欢</div>
+								<div class="user_describe">
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div class="music_card">
+							<div class="music_photo">
+								<img src="../Picture/Music_picture.jpg">
+							</div>
+							<div class="play_btn">
+								<span class="iconfont play icon-bofanganniu"></span>
+							</div>
+							<div class="music_detail">
+								<div class="music_name">洪湖水浪打浪</div>
+								<div class="music_Composition">作曲家：王玉珍</div>
+								<div class="music_describe">《洪湖水浪打浪》是王玉珍演唱的歌曲，创作于1958年，先是1959年湖北省歌剧团首演的歌剧《洪湖赤卫队》中一个场次的主题曲，1961年歌剧改编成同名电影后成为电影主题曲，很快得到了更大范围的传播。</div>
+								<div class="music_likes">3k人喜欢</div>
+								<div class="user_describe">
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div class="music_card">
+							<div class="music_photo">
+								<img src="../Picture/Music_picture.jpg">
+							</div>
+							<div class="play_btn">
+								<span class="iconfont play icon-bofanganniu"></span>
+							</div>
+							<div class="music_detail">
+								<div class="music_name">洪湖水浪打浪</div>
+								<div class="music_Composition">作曲家：王玉珍</div>
+								<div class="music_describe">《洪湖水浪打浪》是王玉珍演唱的歌曲，创作于1958年，先是1959年湖北省歌剧团首演的歌剧《洪湖赤卫队》中一个场次的主题曲，1961年歌剧改编成同名电影后成为电影主题曲，很快得到了更大范围的传播。</div>
+								<div class="music_likes">3k人喜欢</div>
+								<div class="user_describe">
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div class="music_card">
+							<div class="music_photo">
+								<img src="../Picture/Music_picture.jpg">
+							</div>
+							<div class="play_btn">
+								<span class="iconfont play icon-bofanganniu"></span>
+							</div>
+							<div class="music_detail">
+								<div class="music_name">洪湖水浪打浪</div>
+								<div class="music_Composition">作曲家：王玉珍</div>
+								<div class="music_describe">《洪湖水浪打浪》是王玉珍演唱的歌曲，创作于1958年，先是1959年湖北省歌剧团首演的歌剧《洪湖赤卫队》中一个场次的主题曲，1961年歌剧改编成同名电影后成为电影主题曲，很快得到了更大范围的传播。</div>
+								<div class="music_likes">3k人喜欢</div>
+								<div class="user_describe">
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div class="music_card">
+							<div class="music_photo">
+								<img src="../Picture/Music_picture.jpg">
+							</div>
+							<div class="play_btn">
+								<span class="iconfont play icon-bofanganniu"></span>
+							</div>
+							<div class="music_detail">
+								<div class="music_name">洪湖水浪打浪</div>
+								<div class="music_Composition">作曲家：王玉珍</div>
+								<div class="music_describe">《洪湖水浪打浪》是王玉珍演唱的歌曲，创作于1958年，先是1959年湖北省歌剧团首演的歌剧《洪湖赤卫队》中一个场次的主题曲，1961年歌剧改编成同名电影后成为电影主题曲，很快得到了更大范围的传播。</div>
+								<div class="music_likes">3k人喜欢</div>
+								<div class="user_describe">
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div class="music_card">
+							<div class="music_photo">
+								<img src="../Picture/Music_picture.jpg">
+							</div>
+							<div class="play_btn">
+								<span class="iconfont play icon-bofanganniu"></span>
+							</div>
+							<div class="music_detail">
+								<div class="music_name">洪湖水浪打浪</div>
+								<div class="music_Composition">作曲家：王玉珍</div>
+								<div class="music_describe">《洪湖水浪打浪》是王玉珍演唱的歌曲，创作于1958年，先是1959年湖北省歌剧团首演的歌剧《洪湖赤卫队》中一个场次的主题曲，1961年歌剧改编成同名电影后成为电影主题曲，很快得到了更大范围的传播。</div>
+								<div class="music_likes">3k人喜欢</div>
+								<div class="user_describe">
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div class="music_card">
+							<div class="music_photo">
+								<img src="../Picture/Music_picture.jpg">
+							</div>
+							<div class="play_btn">
+								<span class="iconfont play icon-bofanganniu"></span>
+							</div>
+							<div class="music_detail">
+								<div class="music_name">洪湖水浪打浪</div>
+								<div class="music_Composition">作曲家：王玉珍</div>
+								<div class="music_describe">《洪湖水浪打浪》是王玉珍演唱的歌曲，创作于1958年，先是1959年湖北省歌剧团首演的歌剧《洪湖赤卫队》中一个场次的主题曲，1961年歌剧改编成同名电影后成为电影主题曲，很快得到了更大范围的传播。</div>
+								<div class="music_likes">3k人喜欢</div>
+								<div class="user_describe">
+									<div class="iconfont icon-EMOJI-" style="color: red;"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="mui-slider-indicator cus_slider_indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator" style="height: 10px;"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		var heardermylab = document.getElementById('heardermylab');
+		mui.plusReady(function() {
+			heardermylab.style.marginTop = plus.navigator.getStatusbarHeight() + 'px';
+			plus.navigator.setStatusBarStyle('dark');
+		});
+		function player(){//播放音乐
+		    s = plus.audio.createPlayer( "./music/Vacation.mp3" );
+		    var num = s.getDuration();//获取音频总长度number
+		    setTimeout(function(){//延时获取，否则可能没有返回长度
+		        var num = s.getDuration();
+		    },100)
+		    s.play(
+			 // function () {//播放完成回调
+		  //       alert( "Audio play success!" ); 
+		  //   }, function ( e ) {//失败回调
+		  //       alert( "Audio play error: " + e.message ); 
+		  //   } 
+			); 
+		}
+		function pause(){//暂停播放
+		    s.pause();
+		}
+		function resume() {//恢复播放
+		    s.resume();
+		}
+		function seekTo(){
+		    s.seekTo(100);
+		}
+		document.getElementById("back-btn").addEventListener("tap",function(){
+			mui.back();
+		})
+		var play_btns = document.getElementsByClassName('play_btn');
+		var play = document.getElementsByClassName("play");
+		for (let i = 0; i < play_btns.length; i++) {
+			play_btns[i].addEventListener("tap", function() {
+				for(let i=0;i<play.length;i++){
+					if(play_btns[i]==this){
+						play[i].classList.toggle("icon-stop")
+						play[i].classList.toggle('icon-bofanganniu')
+						play_btns[i].classList.toggle("play_btn_active")
+						
+						// player();
+						if(play[i].classList.contains("icon-bofanganniu")==false){
+							player();
+						}else{
+							pause();
+						}
+					}else{
+						if(play_btns[i].classList.contains("play_btn_active")==true){
+							play[i].classList.remove("icon-stop")
+							play[i].classList.add('icon-bofanganniu')
+							play_btns[i].classList.remove("play_btn_active")
+							
+						}
+					}
+				}
+			})
+		}
+		var indicators=document.getElementsByClassName("mui-indicator");
+		document.getElementById('slider').addEventListener('slide', function(e){
+			var k=e.detail.slideNumber;
+			for(var i=0;i<indicators.length;i++){
+				indicators[i].style.height="5px";
+				if(k==0){
+					indicators[1].style.height="10px";
+				}else{
+					indicators[k-1].style.height="10px";
+				}
+				if(k==indicators.length-1){
+					indicators[indicators.length-2].style.height="10px";
+				}else{
+					indicators[k+1].style.height="10px";
+				}
+			}
+			indicators[k].style.height="20px";
+		})
+	</script>
+</html>

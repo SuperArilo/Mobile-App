@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		.mui-search.mui-active:before
+		{
+			left: 45px;
+			top: 18px;
+		}
+	</style>
+	<body>
+		<div style="width: 100%;float: left;position: fixed;height: auto;z-index: 1111111;" id="heardermylab">
+			<div style="width: 100%;float: left;background-color:	#EE3B3B;height: auto;" id="div_top_box">
+
+			</div>
+			<div style="width: 100%;height: 12vw;float: left;background-color: 	#EE3B3B;line-height: 12vw;text-align: center;">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #CCCCCC;line-height: 12vw;position: absolute;left: 3vw;"></a>
+				<span style="text-align: center;color: white;font-size: 5vw;">我的书架</span>
+			</div>
+			<div style="width: 100%;height: 12vw;float: left;background-color: 	#EE3B3B;text-align: center;">
+				<div class="mui-input-row mui-search" style="width: 80%;float: right;line-height: 10vw;">
+					<input type="search" class="mui-input-clear" placeholder="搜索" style="margin: 0 0 2vw 0;padding: 0;width: 80%;border-radius: 10vw;">
+				</div>
+				<div style="width: 20%;height: 10vw;float: right;background-color: #EE3B3B;line-height: 10vw;">
+					<img src="../icon/book.png" style="max-width: 100%;height: 10vw;vertical-align: middle;" />
+				</div>
+			</div>
+		</div>
+		<div style="width: 100%;height: auto;float: left;background-color: #0062CC;" id="content_div_style" data-href="">
+			
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		var div_top_box = document.getElementById('div_top_box');
+		var heardermylab = document.getElementById('heardermylab');
+		var content_div_style = document.getElementById('content_div_style');
+		mui.plusReady(function() {
+			plus.navigator.setStatusBarStyle('light');
+			div_top_box.style.height = plus.navigator.getStatusbarHeight() + 'px';
+			content_div_style.style.marginTop = heardermylab.clientHeight + 'px';
+			content_div_style.style.height = window.screen.height - heardermylab.clientHeight + 'px';
+			var main = plus.webview.currentWebview();
+			var sub_pages = ["my_bookshelf_subpage.html"];
+			var sub_styles = 
+			{
+				top: heardermylab.clientHeight,
+				bottom: "0px",
+			};
+			for (var i = 0; i < sub_pages.length; i++)
+			{
+				var sub = plus.webview.create(sub_pages[i], sub_pages[i], sub_styles);
+				if (i > 0)
+				{
+					sub.hide();
+				}
+				main.append(sub);
+			}
+			var active_tab = sub_pages[0];
+			// var tabs = document.querySelectorAll(".mui-control-item");
+			// for (var j = 0; j < tabs.length; j++)
+			// {
+			// 	tabs[j].addEventListener("tap", function(){
+			// 	var target_tab = this.getAttribute("data-href");
+			// 	if (active_tab == target_tab) 
+			// 	{
+			// 		return;
+			// 	}
+			// 	plus.webview.show(target_tab);
+			// 	plus.webview.hide(active_tab);
+			// 	active_tab = target_tab;
+			// 	});
+			// }
+		});
+	</script>
+</html>

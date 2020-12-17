@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+	<style>
+		.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active
+		{
+			border-bottom: 0px solid #007aff;
+		}
+		.mui-segmented-control.mui-scroll-wrapper .mui-control-item
+		{
+			padding: 0;
+		}
+		.mui-col-xs-3
+		{
+			float: left;
+		}
+		body
+		{
+			text-align: center;
+			background-color: white;
+		}
+		.Main_div_content_box
+		{
+			width: 100%;
+			height: auto;
+			float: left;
+			background-color:white;
+			margin-top: 16vw;
+			z-index: 999999;
+			position: relative;
+			border-radius: 8vw 8vw 0px 0px;
+		}
+		.Main_div_repass_box
+		{
+			width: 100%;
+			height: 30vw;
+			float: left;
+			margin-top: 5vw;
+		}
+		.Main_div_repass_out_div
+		{
+			width: 92%;
+			height: 20vw;
+			float: left;
+			margin-top: 5vw;
+			margin-left: 2.5%;
+			border-radius:5vw 14vw 14vw 5vw;
+			box-shadow: 0px 0px 10px #777777;
+			background-color:#EEEEEE;
+		}
+		.Main_div_repass_left_in_box
+		{
+			width: 40%;
+			height: 20vw;
+			float: left;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #777777;
+		}
+		.Main_div_repass_left_out_box
+		{
+			width: 30%;
+			height: 23vw;
+			float: left;
+			border-radius: 2.5vw;
+			position: absolute;
+			bottom: 5vw;
+			left: 5.5vw;
+			box-shadow: 0px 0px 10px #777777;
+		}
+		.Main_div_respass_center_go_to_repass_div
+		{
+			width: 40%;
+			height: 15vw;
+			float: left;
+			margin-left: 2.5%;
+			margin-top: 2.5vw;
+		}
+		.Center_div_box
+		{
+			width: 100%;
+			height: auto;
+			float: left;
+			background-color: white;
+		}
+		.Center_div_box_h_scroll_font_style
+		{
+			position: absolute;
+			z-index: 1;
+			padding: 0;
+			margin: 0;
+			line-height: 20vw;
+			font-size: 4vw;
+			color: white;
+			margin-left: 11.25vw;
+		}
+		.Center_div_box_h_scroll_picture_style
+		{
+			max-width: 100%;
+			height: 100%;
+			width: 100%;
+			filter: blur(2px);
+			border-radius: 2.5vw;
+		}
+		.Fast_New_div_center
+		{
+			width: 95%;
+			height: 6vw;
+			float: left;
+			line-height: 6vw;
+			margin-top: 8vw;
+			margin-left: 2.5%;
+		}
+		.div_Fast_New_down_box
+		{
+			width: 95%;
+			float: left;
+			margin-left: 2.5%;
+			border-radius: 2.5vw;
+			margin-top: 5vw;
+			box-shadow: 0 0 10px #CCCCCC;
+			padding-bottom: 2vw;
+		}
+		.div_Fast_New_down_box_copy_div
+		{
+			width: 100%;
+			float: left;
+			height: 24vw;
+			border-bottom: solid 1px #CCCCCC;
+		}
+		.div_Fast_New_down_box_left_top_round_box
+		{
+			width: 45%;
+			float: left;
+			height: 7vw;
+			margin-top: 1vw;
+		}
+		.div_Fast_New_down_box_left_top_round_box_right_picture
+		{
+			width: 22%;
+			height: 20.9vw;
+			float: right;
+			margin-right: 5vw;
+			margin-top: 1.55vw;
+			box-shadow: 0 0 5px #CCCCCC;
+			border-radius: 1vw;
+		}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav" style="box-shadow: 0px 0px 0px #413D4A;background-color:transparent;position: relative;z-index: 99;margin-top: 8vw;">
+			<div class="mui-input-row mui-search" style="border-radius: 50px;width: 90%;margin-left: 5%;background-color:transparent;">
+				<input type="search" class="mui-input-clear" placeholder="搜索" style="border-radius: 50px;">
+			</div>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider" style="position: absolute;top: 0;z-index: 8;">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="Lunbo/lunbo4.jpg" />
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="Lunbo/lunbo1.jpg" />
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="Lunbo/lunbo2.jpg" />
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="Lunbo/lunbo3.jpg" />
+						</a>
+					</div>
+					<!-- 第四张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="Lunbo/lunbo4.jpg" />
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="Lunbo/lunbo1.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator" style="margin-bottom: 30vw;">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<div class="Main_div_content_box">
+				<div class="row" style="margin-top: 5vw;">
+					<div class="mui-col-xs-3">
+						<img src="icon/music.png" style="max-width: 100%;width: 45%;height: 11.25vw;" id="Classic_Red_Song"/>
+					</div>
+					<div class="mui-col-xs-3">
+						<img src="icon/vr.png" style="max-width: 100%;width: 45%;height: 11.25vw;" id="vr_html"/>
+					</div>
+					<div class="mui-col-xs-3">
+						<img src="icon/home.png" style="max-width: 100%;width: 45%;height: 11.25vw;" />
+					</div>
+					<div class="mui-col-xs-3">
+						<img src="icon/my_mem.png" style="max-width: 100%;width: 45%;height: 11.25vw;" />
+					</div>
+				</div>
+				<div class="row" style="margin-top: 19vw;">
+					<div class="mui-col-xs-3">
+						<span style="font-size: 3.8vw;color: red;">经典红歌</span>
+					</div>
+					<div class="mui-col-xs-3">
+						<span style="font-size: 3.8vw;color: red;">VR实景</span>
+					</div>
+					<div class="mui-col-xs-3">
+						<span style="font-size: 3.8vw;color: red;">长征路</span>
+					</div>
+					<div class="mui-col-xs-3">
+						<span style="font-size: 3.8vw;color: red;">记忆兵</span>
+					</div>
+				</div>
+				<div class="Main_div_repass_box">
+					<div class="Main_div_repass_out_div">
+						<div class="Main_div_repass_left_in_box">
+							<img src="Picture/Main_in.png" style="max-width: 100%;height: 100%;width: 100%;border-radius: 10px;filter: blur(2px);" />
+						</div>
+						<div class="Main_div_repass_left_out_box">
+							<img src="Picture/Main_out.png" style="max-width: 100%;height: 100%;width: 100%;border-radius: 10px;" />
+						</div>
+						<div class="Main_div_respass_center_go_to_repass_div">
+							<div style="float: left;width: 100%;height: 7.5vw;overflow:hidden;line-height: 7.5vw;">
+								<span style="font-size: 4.5vw;float: left;font-weight: 600;">穿越历史的今天</span>
+							</div>
+							<div style="float: left;width: 100%;height: 7.5vw;line-height: 7.5vw;">
+								<span style="font-size: 4vw;float: left;">7月1日</span>
+							</div>
+						</div>
+						<div id="history_Day" style="width: 12%;height: 11.04vw;float: left;background-color: #DD524D;line-height: 11.04vw;border-radius: 50%;margin-top: 4.48vw;margin-left: 2%;">
+							<span style="font-weight: 500;font-size: 3vw;color: white;">过去</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Center_div_box">
+				<div style="width: 95%;height: 6vw;float: left;line-height: 6vw;margin-bottom: 3vw;margin-left: 2.5%;">
+					<span style="font-size: 4vw;float: left;font-weight: 600;margin-left: 1vw;">往期热文</span>
+				</div>
+				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="height: 20vw;width: 100%;">
+					<div class="mui-scroll" style="padding: 0;margin: 0;">
+						<div class="mui-control-item" style="width: 45vw;height: 20vw;border-radius:10px;">
+							<span class="Center_div_box_h_scroll_font_style">#这代青年人#</span>
+							<img src="Picture/Main_out.png" class="Center_div_box_h_scroll_picture_style"/>
+						</div>
+						<div class="mui-control-item" style="width: 45vw;height: 20vw;border-radius:10px;">
+							<span class="Center_div_box_h_scroll_font_style" style="margin-left:9vw ;">#红色年代简图#</span>
+							<img src="Picture/yijin10.png" class="Center_div_box_h_scroll_picture_style"/>
+						</div>
+						<div class="mui-control-item" style="width: 45vw;height: 20vw;border-radius:10px;">
+							<span class="Center_div_box_h_scroll_font_style">#没想好题目#</span>
+							<img src="Picture/yinji3.png" class="Center_div_box_h_scroll_picture_style"/>
+						</div>
+						<div class="mui-control-item" style="width: 45vw;height: 20vw;background-color: #0062CC;border-radius:10px;">
+							5456456465
+						</div>
+						<div class="mui-control-item" style="width: 45vw;height: 20vw;background-color: #0062CC;border-radius:10px;">
+							5456456465
+						</div>
+					</div>
+				</div>
+				<div class="Fast_New_div_center">
+					<span style="float: left;font-size: 4vw;">最新消息</span>
+					<span class="mui-icon mui-icon-arrowdown" style="float: right;font-size: 5vw;line-height: 6vw;color: #999999;"></span>
+					<span style="float: right;font-size: 4vw;color: #999999;">全部</span>
+				</div>
+			</div>
+			<div class="div_Fast_New_down_box">
+				<div class="div_Fast_New_down_box_copy_div">
+					<div class="div_Fast_New_down_box_left_top_round_box">
+						<div style="width: 35%;height: 7vw;float: left;line-height: 7vw;">
+							<span style="font-size: 3.8vw;float: left;margin-left: 1.5vw;">旧信扎</span>
+						</div>
+						<div style="width: 50%;height: 7vw;float: left;line-height: 7vw;border-left: solid 1px #CCCCCC;">
+							<span style="font-size: 3.8vw;float: left;margin-left: 1.5vw;">龙光贞家书</span>
+						</div>
+						<div style="clear: both;width:100%;height: 7vw;line-height: 7vw;margin-top: 8vw;">
+							<p style="float: left;padding: 0;margin: 0;font-size: 3.3vw;margin-left: 2vw;">2020年6月19日</p>
+						</div>
+					</div>
+					<div class="div_Fast_New_down_box_left_top_round_box_right_picture">
+						<img src="Picture/yinji9.png" style="max-width: 100%;height: 100%;width: 100%;border-radius: 5px;"/>
+					</div>
+				</div>
+				<div class="div_Fast_New_down_box_copy_div">
+					<div class="div_Fast_New_down_box_left_top_round_box">
+						<div style="width: 50%;height: 7vw;float: left;line-height: 7vw;">
+							<span style="font-size: 3.8vw;float: left;margin-left: 1.5vw;">名人题建川</span>
+						</div>
+						<div style="width: 50%;height: 7vw;float: left;line-height: 7vw;border-left: solid 1px #CCCCCC;">
+							<span style="font-size: 3.8vw;float: left;margin-left: 1.5vw;">陈香梅</span>
+						</div>
+						<div style="clear: both;width:100%;height: 7vw;line-height: 7vw;margin-top: 8vw;">
+							<p style="float: left;padding: 0;margin: 0;font-size: 3.3vw;margin-left: 2vw;">2020年6月5日</p>
+						</div>
+					</div>
+					<div class="div_Fast_New_down_box_left_top_round_box_right_picture">
+						<img src="Picture/yinji4.png" style="max-width: 100%;height: 100%;width: 100%;border-radius: 5px;"/>
+					</div>
+				</div>
+				<div class="div_Fast_New_down_box_copy_div">
+					<div class="div_Fast_New_down_box_left_top_round_box">
+						<div style="width: 35%;height: 7vw;float: left;line-height: 7vw;">
+							<span style="font-size: 3.8vw;float: left;margin-left: 1.5vw;">旧信扎</span>
+						</div>
+						<div style="width: 50%;height: 7vw;float: left;line-height: 7vw;border-left: solid 1px #CCCCCC;">
+							<span style="font-size: 3.8vw;float: left;margin-left: 1.5vw;">龙光贞家书</span>
+						</div>
+						<div style="clear: both;width:100%;height: 7vw;line-height: 7vw;margin-top: 8vw;">
+							<p style="float: left;padding: 0;margin: 0;font-size: 3.3vw;margin-left: 2vw;">2020年6月19日</p>
+						</div>
+					</div>
+					<div class="div_Fast_New_down_box_left_top_round_box_right_picture">
+						<img src="Picture/yinji6.png" style="max-width: 100%;height: 100%;width: 100%;border-radius: 5px;"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		mui.plusReady(function() {
+			document.getElementById('Classic_Red_Song').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_Item_Page/Red_Song.html',
+					id:'Main_Item_Page/Red_Song.html',
+				});
+			});
+			document.getElementById('vr_html').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_Item_Page/vr.html',
+					id:'Main_Item_Page/vr.html',
+				});
+			});
+			document.getElementById('history_Day').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_Item_Page/history_Day.html',
+					id:'Main_Item_Page/history_Day.html',
+				});
+			});
+			plus.navigator.setStatusBarStyle('dark');
+		});
+	</script>
+</html>

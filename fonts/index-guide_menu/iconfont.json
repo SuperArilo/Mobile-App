@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "360665",
+      "name": "people",
+      "font_class": "icon25",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "949819",
+      "name": "VR-互动",
+      "font_class": "vr-m",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "8953057",
+      "name": "music",
+      "font_class": "music",
+      "unicode": "e821",
+      "unicode_decimal": 59425
+    },
+    {
+      "icon_id": "9053776",
+      "name": "road-map-line",
+      "font_class": "road-map-line",
+      "unicode": "e790",
+      "unicode_decimal": 59280
+    }
+  ]
+}

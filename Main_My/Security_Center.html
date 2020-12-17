@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		.heardermylab
+		{
+			width: 100%;
+			float: left;
+			position: fixed;
+			height: auto;
+		}
+		.heardermylab_div_top_box
+		{
+			width: 100%;
+			float: left;
+			height: auto;
+			background-color: white;
+		}
+		.heardermylab_content_box
+		{
+			width: 100%;
+			height: 12vw;
+			float: left;
+			background-color: white;
+			line-height: 12vw;
+			text-align: center;
+		}
+		.heardermylab_content_box a
+		{
+			color:#000000;
+			line-height: 12vw;
+			position: absolute;
+			left: 3vw;
+		}
+		.heardermylab_content_box span
+		{
+			text-align: center;
+			color: #000000;
+			font-size: 5vw;
+			font-weight: 600;
+		}
+		.div_Center_content_box
+		{
+			width: 100%;
+			height: 72vw;
+			float: left;
+			background-color: white;
+			padding: 2vw 0 77vw 0;
+		}
+		.div_Center_content_sub_box
+		{
+			width: 100%;
+			height: 18vw;
+			float: left;
+		}
+		.div_Center_content_sub_box:active
+		{
+			background-color: #CCCCCC;
+		}
+		.div_Center_content_sub_title_box
+		{
+			display: block;
+			width: 80%;
+			height: 18vw;
+			float: left;
+			margin-left: 10%;
+			line-height: 18vw;
+			border-bottom: 1px solid #CCCCCC;
+		}
+		.div_Center_content_sub_title_box span
+		{
+			font-size: 4vw;
+			display: block;
+			vertical-align: middle;
+		}
+		.div_Center_content_sub_jiantou_box
+		{
+			width: 10%;
+			height: 18vw;
+			float: left;
+			line-height: 18vw;
+			text-align: center;
+		}
+		.div_Center_content_sub_jiantou_box span
+		{
+			line-height: 18vw;
+			font-size: 6vw;
+			color: #777777;
+			font-weight: 500;
+		}
+	</style>
+	<body>
+		<div class="heardermylab" id="heardermylab">
+			<div class="heardermylab_div_top_box" id="div_top_box">
+				
+			</div>
+			<div class="heardermylab_content_box">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<span>安全中心</span>
+			</div>
+		</div>
+		<div class="div_Center_content_box" id="div_Center_content_box">
+			<div class="div_Center_content_sub_box">
+				<div class="div_Center_content_sub_title_box">
+					<span>修改密码</span>
+				</div>
+				<div class="div_Center_content_sub_jiantou_box">
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+			<div class="div_Center_content_sub_box">
+				<div class="div_Center_content_sub_title_box">
+					<span>更换手机号</span>
+				</div>
+				<div class="div_Center_content_sub_jiantou_box">
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+			<div class="div_Center_content_sub_box">
+				<div class="div_Center_content_sub_title_box">
+					<span>邮箱地址</span>
+				</div>
+				<div class="div_Center_content_sub_jiantou_box">
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+			<div class="div_Center_content_sub_box">
+				<div class="div_Center_content_sub_title_box">
+					<span>注销账号</span>
+				</div>
+				<div class="div_Center_content_sub_jiantou_box">
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		var heardermylab = document.getElementById('heardermylab');
+		var div_top_box = document.getElementById('div_top_box');
+		var div_Center_content_box = document.getElementById('div_Center_content_box');
+		mui.plusReady(function () {
+			plus.navigator.setStatusBarStyle('dark');
+		    div_top_box.style.height = plus.navigator.getStatusbarHeight() + 'px';
+			div_Center_content_box.style.marginTop = heardermylab.clientHeight + 20 + 'px';
+		});
+		
+	</script>
+</html>

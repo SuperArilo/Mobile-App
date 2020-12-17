@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "212329",
+      "name": "stop",
+      "font_class": "stop",
+      "unicode": "e750",
+      "unicode_decimal": 59216
+    },
+    {
+      "icon_id": "3536924",
+      "name": "EMOJI-95",
+      "font_class": "EMOJI-",
+      "unicode": "eadb",
+      "unicode_decimal": 60123
+    },
+    {
+      "icon_id": "6928827",
+      "name": "play",
+      "font_class": "bofanganniu",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    }
+  ]
+}

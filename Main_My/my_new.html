@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title></title>
+        <link href="../css/mui.min.css" rel="stylesheet"/>
+    </head>
+	<style>
+		.mui-col-xs-6
+		{
+			float: left;
+		}
+		body
+		{
+			width: 100%;
+			height: 100%;
+		}
+		.div_back_box
+		{
+			width: 12%;
+			height: 12vw;
+			position: absolute;
+			background-color: #AAAAAA;
+			text-align: center;
+			border-radius: 50%;
+			left: 5vw;
+		}
+	    .div_move_box
+		{
+			position:fixed;
+			bottom: -60%;
+			width:100%;
+			height:100%;
+			background-color: white;
+			border-radius: 10vw 10vw 0 0;
+		}
+		.div_can_move_change_box
+		{
+			width: 75%;
+			height: 1.5vw;
+			float: left;
+			background-color:#666666;
+			border-radius: 15vw;
+			margin: 4vw 0 0 12.5%;
+		}
+		.div_User_box
+		{
+			width: 100%;
+			height: 30vw;
+			float: left;
+		}
+		.div_user_information_box
+		{
+			width: 60%;
+			height: 25vw;
+			float: left;
+			margin: 2.5vw 0 0 5vw;
+		}
+		.div_user_information_head
+		{
+			width: 20vw;
+			height: 20vw;
+			float: left;
+			margin: 2.5vw;
+		}
+		.div_user_information_title
+		{
+			width: 35vw;
+			height: 19vw;
+			float: left;
+			margin: 3vw 0 0 0;
+		}
+		.div_user_information_title_Name
+		{
+			width: 100%;
+			height: 10vw;
+			float: left;
+			line-height: 10vw;
+			text-align: left;
+		}
+		.div_user_information_title_Personal_signature
+		{
+			width: 100%;
+			height: 9vw;
+			float: left;
+			line-height: 9vw;
+		}
+		.div_user_information_box_right_icon_box
+		{
+			width: 30%;
+			height: 8vw;
+			float: left;
+			margin: 11vw 0 0 2.5vw;
+			text-align: center;
+		}
+	</style>
+    <body>
+		<div class="div_back_box" id="div_back_box">
+			<span class="mui-action-back mui-icon mui-icon-left-nav" style="margin-left: 2vw;float: left;line-height: 12vw;" id="back"></span>
+		</div>
+		<div style="width: 100%;height: 100%;position: relative;z-index: -1;top: 0;">
+			<img src="../Picture/zhoubian3.jpg" style="max-width: 100%;height: 100%;width: 100%;vertical-align: middle;"/>
+		</div>
+		<div class="div_move_box" id="div_move_box">
+			<div style="width: 25%;height: 10vw;float: left;margin-left: 37.5%;" id="div_can_move_change_box">
+				<div class="div_can_move_change_box"></div>
+			</div>
+			<div class="div_User_box">
+				<div class="div_user_information_box">
+					<div class="div_user_information_head">
+						<img src="../Picture/User_Head.jpg" style="max-width: 100%;border-radius: 50%;"/>
+					</div>
+					<div class="div_user_information_title">
+						<div class="div_user_information_title_Name">
+							<span style="font-size: 4.5vw;font-weight: 600;">买菜必涨价</span>
+						</div>
+						<div class="div_user_information_title_Personal_signature">
+							<span style="font-size: 3.5vw;font-weight: 600;">你抓不到我</span>
+						</div>
+					</div>
+				</div>
+				<div class="div_user_information_box_right_icon_box">
+					<div class="row">
+						<div class="mui-col-xs-6">
+							<img src="../icon/Download.png" style="max-width: 100%;height: 8vw;"/>
+						</div>
+						<div class="mui-col-xs-6" >
+							<img src="../icon/Like.png" style="max-width: 100%;height: 8vw;" id="change_img"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script src="../js/mui.min.js"></script>
+    <script type="text/javascript">
+		mui.init();
+		var div_back_box = document.getElementById('div_back_box');
+		var change_img = document.getElementById('change_img');
+		var change_value = 0;
+		change_img.addEventListener('tap',function(){
+			if(change_value == 0)
+			{
+				change_img.src = "../icon/Like.png";
+				change_value = 1;
+			}
+			else if(change_value == 1)
+			{
+				change_img.src = "../icon/Love.png";
+				change_value = 0;
+			}
+		});
+		mui.plusReady(function () {
+		    div_back_box.style.marginTop = plus.navigator.getStatusbarHeight() +'px';
+			$(function(){
+				var cont = $("#div_can_move_change_box");
+				var contH = $("#div_move_box").height();
+				var startY,sY,moveY;
+				var winH = $(window).height();
+			    cont.on({touchstart:function(e){
+						startY = e.originalEvent.targetTouches[0].pageY;    //获取点击点的Y坐标
+						// console.log("startY = " + startY);
+						sY = $("#div_move_box").offset().top;//相对于当前窗口Y轴的偏移量
+						// console.log("sY="+sY);
+						topY = startY - sY + plus.navigator.getStatusbarHeight() + div_back_box.clientHeight;//鼠标所能移动最上端是当前鼠标距div上边距的位置
+						bottomY = winH - (contH / 3) + topY;//鼠标所能移动最下端是当前窗口距离减去鼠标距div最下端位置
+						},
+						touchmove:function(e){
+						e.preventDefault();
+						moveY=e.originalEvent.targetTouches[0].pageY;//移动过程中Y轴的坐标
+						// console.log("moveY = " + moveY + "-------bottomY = " +bottomY);
+						if(moveY < topY)
+						{
+							moveY = topY;
+						}
+			            if(moveY > bottomY)
+						{
+							moveY = bottomY;
+						}
+						$("#div_move_box").css({
+							"top":moveY + sY - startY,
+							})
+			            },
+					});
+			    })
+				plus.navigator.setStatusBarStyle('dark');
+		});
+    </script>
+</html>

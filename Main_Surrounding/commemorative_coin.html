@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		body
+		{
+			background-color: white;
+		}
+		.mui-segmented-control.mui-scroll-wrapper .mui-control-item
+		{
+			padding: 0;
+		}
+		.mui-segmented-control .mui-control-item.mui-active 
+		{
+			color: #E62557;
+		}
+		.mui-segmented-control
+		{
+			border: 0;
+		}
+		.mui-segmented-control .mui-control-item
+		{
+			border-left: 0;
+			color: #000000;
+		}
+		.mui-control-item.mui-active
+		{
+			border-bottom: solid 1px #CD5C5C;
+			
+		}
+		.mui-icon.mui-icon-search
+		{
+			line-height: 13vw;
+			float: left;
+			margin-left: 5vw;
+		}
+		.div_top_bacgroud_picture
+		{
+			float: left;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+		}
+		.div_Center_content_box
+		{
+			background-color: white;
+			width: 100%;
+			position: absolute;
+			top: 60vw;
+			z-index: 2;
+			border-radius: 8vw 8vw 0 0;
+		}
+		.div_Center_search_box
+		{
+			width: 70%;
+			height: 13vw;
+			position: absolute;
+			background-color:white;
+			top: 52vw;
+			z-index: 3;
+			left: 15vw;
+			border-radius: 5vw;
+			box-shadow: 0 0 5vw #999999;
+		}
+		.div_segmented_control_font_style
+		{
+			font-size: 4.5vw;
+			font-weight: 700;
+		}
+		.Coin_P_Style
+		{
+			margin: 0;
+			padding: 0;
+			float: left;
+			height: 4vw;
+			width: 100%;
+			line-height: 4vw;
+			font-size: 2vw;
+		}
+	</style>
+	<body>
+		<div class="div_top_bacgroud_picture" id="div_top_bacgroud_picture">
+			<img src="../Lunbo/lunbo3.jpg" style="max-width: 100%;"/>
+		</div>
+		<div class="div_Center_search_box">
+			<div class="mui-input-row mui-search" style="width: 100%;height: 100%;line-height: 15vw;">
+				<input type="search" class="mui-input-clear" placeholder="" style="width: 100%;height: 100%;margin: 0;padding: 0;background-color: transparent;">
+			</div>
+		</div>
+		<div class="div_Center_content_box" id="div_Center_content_box">
+			<div style="width: 90%;height: auto;float: left;margin-left: 5%;">
+				<div class="mui-segmented-control" style="margin-top: 15vw;">
+					<a class="mui-control-item mui-active div_segmented_control_font_style" href="#item1">纪念币</a>
+					<a class="mui-control-item div_segmented_control_font_style" href="#item2">特殊物</a>
+					<a class="mui-control-item div_segmented_control_font_style" href="#item3">纪念品</a>
+				</div>
+				<div id="item1" class="mui-control-content mui-active">
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="height: 90vw;width: 100%;margin-top: 15vw;">
+						<div class="mui-scroll" style="padding: 0;margin: 0;">
+							<div class="mui-control-item" style="width: 55vw;height: 80vw;border-radius:10px;margin-left: 10vw;box-shadow: 0 0 5vw #AAAAAA;margin-top: 5vw;">
+								<div style="width: 35vw;height: 35vw;float: left;margin-left: 10vw;">
+									<img src="../Picture/jilianbi1.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+								</div>
+								<div style="width: 100%;height: 6vw;float: left;line-height: 6vw;">
+									<span style="font-size: 3.5vw;">辛亥革命纪念币</span>
+								</div>
+								<div style="width: 95%;height: 39vw;float: left;margin-left: 2.5%;margin-top: 1vw;">
+									<p class="Coin_P_Style">辛亥革命100周年纪念币一共有两枚组成，</p>
+									<p class="Coin_P_Style">其中由一枚金币和一枚银币组成，都是我国的</p>
+									<p class="Coin_P_Style">法定货币。从整体的设计方面来看，这套纪念</p>
+									<p class="Coin_P_Style">币在细节和工艺制作上有了很大的提高，将中</p>
+									<p class="Coin_P_Style">国的纪念币又提升了一个档次，金币印有孙中</p>
+									<p class="Coin_P_Style">山的人物肖像，眉宇之间十分传神，然而银币</p>
+									<p class="Coin_P_Style">用最大的程度将人民英雄纪念碑进行的还原，</p>
+									<p class="Coin_P_Style">浮雕艺术的设计与内容都将辛亥革命的胜利完</p>
+									<p class="Coin_P_Style">整的展现出来,给人们带来了一种视觉冲击力。</p>
+								</div>
+							</div>
+							<div class="mui-control-item" style="width: 55vw;height: 80vw;border-radius:10px;margin-left: 10vw;box-shadow: 0 0 5vw #AAAAAA;margin-top: 5vw;">
+								<div style="width: 35vw;height: 35vw;float: left;margin-left: 10vw;">
+									<img src="../Picture/jilianbi1.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+								</div>
+								<div style="width: 100%;height: 6vw;float: left;line-height: 6vw;">
+									<span style="font-size: 3.5vw;">辛亥革命纪念币</span>
+								</div>
+								<div style="width: 95%;height: 39vw;float: left;margin-left: 2.5%;margin-top: 1vw;">
+									<p class="Coin_P_Style">辛亥革命100周年纪念币一共有两枚组成，</p>
+									<p class="Coin_P_Style">其中由一枚金币和一枚银币组成，都是我国的</p>
+									<p class="Coin_P_Style">法定货币。从整体的设计方面来看，这套纪念</p>
+									<p class="Coin_P_Style">币在细节和工艺制作上有了很大的提高，将中</p>
+									<p class="Coin_P_Style">国的纪念币又提升了一个档次，金币印有孙中</p>
+									<p class="Coin_P_Style">山的人物肖像，眉宇之间十分传神，然而银币</p>
+									<p class="Coin_P_Style">用最大的程度将人民英雄纪念碑进行的还原，</p>
+									<p class="Coin_P_Style">浮雕艺术的设计与内容都将辛亥革命的胜利完</p>
+									<p class="Coin_P_Style">整的展现出来,给人们带来了一种视觉冲击力。</p>
+								</div>
+							</div>
+							<div class="mui-control-item" style="width: 55vw;height: 80vw;border-radius:10px;margin-left: 10vw;box-shadow: 0 0 5vw #AAAAAA;margin-top: 5vw;">
+								<div style="width: 35vw;height: 35vw;float: left;margin-left: 10vw;">
+									<img src="../Picture/jilianbi1.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+								</div>
+								<div style="width: 100%;height: 6vw;float: left;line-height: 6vw;">
+									<span style="font-size: 3.5vw;">辛亥革命纪念币</span>
+								</div>
+								<div style="width: 95%;height: 39vw;float: left;margin-left: 2.5%;margin-top: 1vw;">
+									<p class="Coin_P_Style">辛亥革命100周年纪念币一共有两枚组成，</p>
+									<p class="Coin_P_Style">其中由一枚金币和一枚银币组成，都是我国的</p>
+									<p class="Coin_P_Style">法定货币。从整体的设计方面来看，这套纪念</p>
+									<p class="Coin_P_Style">币在细节和工艺制作上有了很大的提高，将中</p>
+									<p class="Coin_P_Style">国的纪念币又提升了一个档次，金币印有孙中</p>
+									<p class="Coin_P_Style">山的人物肖像，眉宇之间十分传神，然而银币</p>
+									<p class="Coin_P_Style">用最大的程度将人民英雄纪念碑进行的还原，</p>
+									<p class="Coin_P_Style">浮雕艺术的设计与内容都将辛亥革命的胜利完</p>
+									<p class="Coin_P_Style">整的展现出来,给人们带来了一种视觉冲击力。</p>
+								</div>
+							</div>
+							<div class="mui-control-item" style="width: 55vw;height: 80vw;border-radius:10px;margin-left: 10vw;box-shadow: 0 0 5vw #AAAAAA;margin-top: 5vw;">
+								<div style="width: 35vw;height: 35vw;float: left;margin-left: 10vw;">
+									<img src="../Picture/jilianbi1.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+								</div>
+								<div style="width: 100%;height: 6vw;float: left;line-height: 6vw;">
+									<span style="font-size: 3.5vw;">辛亥革命纪念币</span>
+								</div>
+								<div style="width: 95%;height: 39vw;float: left;margin-left: 2.5%;margin-top: 1vw;">
+									<p class="Coin_P_Style">辛亥革命100周年纪念币一共有两枚组成，</p>
+									<p class="Coin_P_Style">其中由一枚金币和一枚银币组成，都是我国的</p>
+									<p class="Coin_P_Style">法定货币。从整体的设计方面来看，这套纪念</p>
+									<p class="Coin_P_Style">币在细节和工艺制作上有了很大的提高，将中</p>
+									<p class="Coin_P_Style">国的纪念币又提升了一个档次，金币印有孙中</p>
+									<p class="Coin_P_Style">山的人物肖像，眉宇之间十分传神，然而银币</p>
+									<p class="Coin_P_Style">用最大的程度将人民英雄纪念碑进行的还原，</p>
+									<p class="Coin_P_Style">浮雕艺术的设计与内容都将辛亥革命的胜利完</p>
+									<p class="Coin_P_Style">整的展现出来,给人们带来了一种视觉冲击力。</p>
+								</div>
+							</div>
+							<div class="mui-control-item" style="width: 55vw;height: 80vw;border-radius:10px;margin-left: 10vw;box-shadow: 0 0 5vw #AAAAAA;margin-top: 5vw;margin-right: 5vw;">
+								<div style="width: 35vw;height: 35vw;float: left;margin-left: 10vw;">
+									<img src="../Picture/jilianbi1.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+								</div>
+								<div style="width: 100%;height: 6vw;float: left;line-height: 6vw;">
+									<span style="font-size: 3.5vw;">辛亥革命纪念币</span>
+								</div>
+								<div style="width: 95%;height: 39vw;float: left;margin-left: 2.5%;margin-top: 1vw;">
+									<p class="Coin_P_Style">辛亥革命100周年纪念币一共有两枚组成，</p>
+									<p class="Coin_P_Style">其中由一枚金币和一枚银币组成，都是我国的</p>
+									<p class="Coin_P_Style">法定货币。从整体的设计方面来看，这套纪念</p>
+									<p class="Coin_P_Style">币在细节和工艺制作上有了很大的提高，将中</p>
+									<p class="Coin_P_Style">国的纪念币又提升了一个档次，金币印有孙中</p>
+									<p class="Coin_P_Style">山的人物肖像，眉宇之间十分传神，然而银币</p>
+									<p class="Coin_P_Style">用最大的程度将人民英雄纪念碑进行的还原，</p>
+									<p class="Coin_P_Style">浮雕艺术的设计与内容都将辛亥革命的胜利完</p>
+									<p class="Coin_P_Style">整的展现出来,给人们带来了一种视觉冲击力。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="item2" class="mui-control-content">
+					zxcxzcz
+				</div>
+				<div id="item3" class="mui-control-content">
+					456456456
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		mui.plusReady(function () {
+			plus.navigator.setStatusBarStyle('dark');
+		});
+	</script>
+</html>

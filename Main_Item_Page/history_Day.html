@@ -1,0 +1,615 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="fonts/index-comment-bar/iconfont.css"/>
+		<style type="text/css">
+			body {
+				padding: 0;
+				margin: 0;
+				position: relative;
+				background-color: white;
+			}
+
+			.mui-content {
+				background-color: white !important;
+			}
+		</style>
+		<style type="text/css">
+			/* 顶部返回键—————————————————————————————— */
+			.top_back {
+				height: 45px;
+				line-height: 45px;
+				position: absolute;
+				top: 0;
+				z-index: 999;
+			}
+
+			.top_back span {
+				width: 45px;
+				height: 45px;
+				line-height: 45px;
+				text-align: center;
+				color: white;
+				z-index: 999;
+			}
+
+			/* 视频占位符———————————————————————————————— */
+			.video_container {
+				width: 100%;
+				height: 250px;
+				overflow: hidden;
+				position: relative;
+				z-index: 1;
+				background-color: #0062CC;
+			}
+			.video_container video{
+				width: 100%;
+				height: 250px;
+			}
+
+			.video_container img {
+				width: 100%;
+				height: auto;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 0;
+			}
+
+			/* 视频描述———————————————————————————————————— */
+			.video_detail {
+				width: 100%;
+				height: auto;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-top: 15px;
+			}
+
+			.video_name {
+				font-size: 20px;
+				font-weight: 800;
+				text-align: left;
+				margin-bottom: 10px;
+			}
+
+			.video_maker {
+				font-size: 14px;
+				color: gray;
+			}
+
+			.video_describe {
+				font-size: 14px;
+				color: gray;
+				height: 40px;
+				overflow: hidden;
+				margin-bottom: 10px;
+			}
+
+			.video_more_describe_btn span {
+				font-size: 14px;
+				color: gray;
+			}
+
+			/* 播放点赞—————————————————————————— */
+			.play_and_like {
+				margin-top: 20px;
+				width: 100%;
+				height: 70px;
+				display: flex;
+				justify-content: space-between;
+				border-bottom: solid 1px lightgray;
+				padding-bottom: 30px;
+			}
+
+			.video_play_times,
+			.video_like_times {
+				width: 180px;
+				height: 40px;
+				text-align: left;
+				display: flex;
+				background-color: #e8e8e9;
+				border-radius: 10px;
+				line-height: 40px;
+				font-size: 14px;
+				padding-left: 10px;
+				padding-right: 10px;
+				justify-content: space-between;
+				box-shadow: 0 0 12px #e8e8e9;
+			}
+
+			.video_like_times span {
+				color: red;
+				line-height: 40px;
+				font-weight: 800;
+			}
+
+
+			/* 集数———————————————————————————————— */
+			.video_episode_number {
+				width: 100%;
+				height: auto;
+				padding: 20px;
+			}
+
+			.video_spisode_number_profile {
+				width: 100%;
+				height: 30px;
+				display: flex;
+				line-height: 30px;
+				font-size: 14px;
+				justify-content: space-between;
+				margin-bottom: 10px;
+			}
+
+			.episode_number_left,
+			.episode_number_right {
+				width: 100%;
+				text-align: left;
+				height: 30px;
+				line-height: 30px;
+			}
+
+			.is_end {
+				min-width: 30px;
+				min-height: 20px;
+				background-color: #ea591d;
+				color: white;
+				border-radius: 5px;
+				font-size: 10px;
+				padding: 1px;
+			}
+
+			.all_count {
+				font-size: 10px;
+				color: gray;
+			}
+
+			.episode_number_right {
+				display: flex;
+				justify-content: flex-end;
+			}
+
+			.episode_number_right span {
+				font-size: 10px;
+				line-height: 30px;
+				color: gray;
+			}
+
+			.cus-episode-slider {
+				margin-bottom: 20px;
+			}
+
+			.cus-episode-slider-item {
+				width: 60px !important;
+				height: 50px !important;
+				padding-right: 10px;
+				text-align: center;
+				line-height: 50px;
+			}
+
+			.episode_number_context {
+				width: 50px;
+				height: 50px;
+				background-color: #f5f6f9;
+				border-radius: 5px;
+				font-size: 14px;
+				font-weight: 800;
+			}
+
+			.into_the_red_member {
+				display: flex;
+				justify-content: center;
+				font-size: 14px;
+				height: 30px;
+				line-height: 30px;
+			}
+
+			.into_the_red_member_text_mark {
+				color: red;
+			}
+
+			.into_the_red_member span {
+				font-size: 14px;
+				line-height: 30px;
+				font-weight: 800;
+			}
+
+			.video_episode_number_line {
+				margin-top: 30px;
+				width: 100%;
+				border-bottom: solid 1px lightgray;
+			}
+
+
+			/* 推荐阅读———————————————————————————————————— */
+			.recommend_read_pannel {
+				width: 100%;
+				height: auto;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			.recommend_read_title {
+				width: 100%;
+				height: 20px;
+				display: flex;
+				margin-bottom: 10px;
+			}
+
+			.recommend_read_title_left_red_mark {
+				height: 15px;
+				width: 3px;
+				background-color: #dc2922;
+				margin-right: 5px;
+				line-height: 20px;
+				margin-top: 5px;
+			}
+
+			.recommend_read_title_left_red_text {
+				font-size: 16px;
+				font-weight: 800;
+			}
+
+			/* 列表 */
+
+			.recommend_read_list {
+				width: 100%;
+				height: auto;
+			}
+
+			.recommend_read_list_item {
+				width: 100%;
+				height: 100px;
+				display: flex;
+				margin-top: 30px;
+				justify-content: space-between;
+				border-bottom: 1px solid lightgray;
+			}
+
+			.recommend_read_list_item_left {
+				width: 100%;
+			}
+
+			.recommend_read_list_item_left_title {
+				height: 30px;
+				font-size: 16px;
+				line-height: 30px;
+				width: 100%;
+				padding-left: 10px;
+				padding-right: 10px;
+				overflow: hidden;
+			}
+
+			.recommend_read_list_item_left_detail {
+				max-height: 50px;
+				font-size: 16px;
+				font-size: 14px;
+				overflow: hidden;
+				color: gray;
+				width: 100%;
+				display: -webkit-box;
+				padding-left: 10px;
+				padding-right: 20px;
+				text-overflow: ellipsis;
+				line-clamp: 3;
+				box-orient: vertical;
+			}
+
+			.recommend_read_list_item_right {
+				width: 125px;
+				height: 100px;
+				min-height: 80px;
+				min-width: 125px;
+			}
+
+			.recommend_read_list_item_right_photo {
+				width: 125px;
+				height: 80px;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+
+			.recommend_read_list_item_right_photo img {
+				width: 100%;
+				height: auto;
+			}
+			
+			/* ========================评论================================ */
+			
+			.comment_tab{
+				width: 100%;
+				height: 50px;
+				display: flex;
+				position: sticky;
+				bottom: 0px;
+				background-color: white;
+			}
+			.left_input{
+				width: 70%;
+				margin-left: 20px;
+				height: 50px;
+				line-height: 50px;
+			}
+			.cus_input_comments{
+				border: none !important;
+				background-color: #f1f2f3 !important;
+				height: 35px !important;
+				width: 90% !important;
+			}
+			.cus_input_comments[placeholder]{
+				font-size: 14px;
+				font-weight: 800;
+			}
+			.right_icon_btns{
+				width: 30%;
+				display: flex;
+				height: 50px;
+				line-height: 50px;
+				margin-right: 20px;
+				justify-content: space-between;
+			}
+			.comments span{
+				font-size: 25px;
+				color: #333333;
+			}
+			.star span{
+				font-size: 25px;
+				color: #333333;
+			}
+			.share span{
+				font-size: 25px;
+				color: #333333;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<div class="mui-content">
+			<!-- 顶部返回 -->
+			<div class="top_back">
+				<span class="icon mui-icon mui-icon-arrowleft" id="back-btn"></span>
+			</div>
+			<!-- 视频占位符 -->
+			<div class="video_container">
+				<!-- <img src="img/印忆%20(1).jpeg">
+				 -->
+				 <!-- <video src="video/yuanshen.mp4" autoplay="autoplay" controls="controls">
+				 您的浏览器不支持 video 标签。
+				 </video> -->
+				 <iframe src="//player.bilibili.com/player.html?aid=969468356&bvid=BV1Qp4y1Y7dt&cid=231513165&page=1" width="100%" height="100%" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+			</div>
+			<!-- 视频简介 -->
+			<div class="video_detail">
+				<div class="video_name">【延安历史上的今天】 7月1日</div>
+				<div class="video_maker">延安市融媒体中心 2020-07-01</div>
+				<div class="video_describe">
+					延安市，简称“延”，陕西省地级市，位于陕西省北部，地处黄河中游，黄土高原的中南地区，省会西安以北371千米。北连榆林，南接关中咸阳、铜川、渭南三市，东隔黄河与山西临汾、吕梁相望，西邻甘肃庆阳。总面积37037平方千米，被誉为“三秦锁钥，五路襟喉”。
+				</div>
+				<div class="video_more_describe_btn">
+					<span class="video_more_text">展开</span>
+					<span class="icon mui-icon mui-icon-arrowdown"></span>
+				</div>
+				<div class="play_and_like">
+					<div class="video_play_times">
+						<div class="video_play_times_text">播放 43,123</div>
+						<span></span>
+					</div>
+					<div class="video_like_times">
+						<div class="video_like_times_text">播放 43,123</div>
+						<span class="icon mui-icon mui-icon-flag"></span>
+					</div>
+				</div>
+			</div>
+			<!-- 视频集数 -->
+			<div class="video_episode_number">
+				<div class="video_spisode_number_profile">
+					<div class="episode_number_left">
+						<span class="is_end">完结</span>
+						<span class="all_count">共109集</span>
+					</div>
+					<div class="episode_number_right">
+						<span class="show_all">查看全部</span>
+						<span class="icon mui-icon mui-icon-arrowright"></span>
+					</div>
+				</div>
+
+				<div class="mui-slider cus-episode-slider">
+					<div class="mui-slider-group">
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">1</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">2</div>
+						</div>
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">3</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">4</div>
+						</div>
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">5</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">6</div>
+						</div>
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">7</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">8</div>
+						</div>
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">9</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">10</div>
+						</div>
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">1</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">2</div>
+						</div>
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">3</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">4</div>
+						</div>
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">5</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">6</div>
+						</div>
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">7</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">8</div>
+						</div>
+						<!--第一个内容区容器-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">9</div>
+						</div>
+						<!--第二个内容区-->
+						<div class="mui-slider-item cus-episode-slider-item">
+							<div class="episode_number_context">10</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="into_the_red_member">
+					<div class="into_the_red_member_text">进入<span class="into_the_red_member_text_mark">红色记忆频道</span>查看更多内容</div>
+					<span class="icon mui-icon mui-icon-arrowright"></span>
+				</div>
+
+				<div class="video_episode_number_line"></div>
+			</div>
+			<!-- 推荐阅读 -->
+			<div class="recommend_read_pannel">
+				<div class="recommend_read_title">
+					<div class="recommend_read_title_left_red_mark"></div>
+					<div class="recommend_read_title_left_red_text">推荐阅读</div>
+				</div>
+			<!-- 推荐列表 -->
+				<div class="recommend_read_list">
+					<div class="recommend_read_list_item">
+						<div class="recommend_read_list_item_left">
+							<div class="recommend_read_list_item_left_title">
+								《同家职业》第一季
+							</div>
+							<div class="recommend_read_list_item_left_detail">
+								Charles and I had a briefing in his study behind closed doors.
+							</div>
+						</div>
+						<div class="recommend_read_list_item_right">
+							<div class="recommend_read_list_item_right_photo">
+								<img src="../Picture/yinji1.png">
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend_read_list_item">
+						<div class="recommend_read_list_item_left">
+							<div class="recommend_read_list_item_left_title">
+								《同家职业》第一季
+							</div>
+							<div class="recommend_read_list_item_left_detail">
+								一段非常非常非常非常非常非常非常非常非常非常非常简要的介绍
+							</div>
+						</div>
+						<div class="recommend_read_list_item_right">
+							<div class="recommend_read_list_item_right_photo">
+								<img src="../Picture/yinji3.png">
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend_read_list_item">
+						<div class="recommend_read_list_item_left">
+							<div class="recommend_read_list_item_left_title">
+								《同家职业》第一季
+							</div>
+							<div class="recommend_read_list_item_left_detail">
+								描述
+							</div>
+						</div>
+						<div class="recommend_read_list_item_right">
+							<div class="recommend_read_list_item_right_photo">
+								<img src="../Picture/yinji4.png">
+							</div>
+						</div>
+					</div>
+					
+					<div class="recommend_read_list_item">
+						<div class="recommend_read_list_item_left">
+							<div class="recommend_read_list_item_left_title">
+								《同家职业》第一季
+							</div>
+							<div class="recommend_read_list_item_left_detail">
+								描述
+							</div>
+						</div>
+						<div class="recommend_read_list_item_right">
+							<div class="recommend_read_list_item_right_photo">
+								<img src="../Picture/yinji5.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- 评论 -->
+		<div class="comment_tab">
+			<div class="left_input">
+				<input type="text" class="cus_input_comments" placeholder="欢迎发表你的观点" name="" id="" value="" />
+			</div>
+			<div class="right_icon_btns">
+				<div class="comments">
+					<span class="icon iconfont icon-comment"></span>
+				</div>
+				<div class="star">
+					<span class="icon iconfont icon-star"></span>
+				</div>
+				<div class="share">
+					<span class="icon iconfont icon-share"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		mui('body').on('tap','#back-btn',function(){
+			mui.back();
+		})
+	</script>
+</html>

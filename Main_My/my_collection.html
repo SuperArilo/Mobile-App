@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		body
+		{
+			width: 100%;
+			height: 100%;
+		}
+		.div_background_picture_box
+		{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			filter: blur(1vw);
+			z-index: 1;
+			top: 0;
+			left: 0;
+			overflow:hidden;
+		}
+		.div_background_picture_style
+		{
+			height: 100%;
+			width: 100%;
+			max-width: 100%;
+			vertical-align: middle;
+			transform: scale(2);
+		}
+		.div_z_index_two_box
+		{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 2;
+		}
+		.div_top_back_box
+		{
+			width: 12vw;
+			height: 12vw;
+			position: relative;
+			background-color: #AAAAAA;
+			text-align: center;
+			border-radius: 50%;
+			left: 5vw;
+		}
+		.div_Head_box
+		{
+			width: 90%;
+			height: 20vw;
+			float: left;
+			background-color: transparent;
+			margin-left: 5%;
+		}
+		.div_Head_user_box
+		{
+			width: 60%;
+			height: 20vw;
+			float: left;
+			margin-left: 5%;
+		}
+		.div_Head_user_picture
+		{
+			width: 15vw;
+			height: 15vw;
+			float: left;
+			margin: 2.5vw 0 0 5vw;
+		}
+		.div_Head_user_name
+		{
+			width: 30vw;
+			height: 8vw;
+			float: left;
+			margin-top: 3vw;
+			line-height: 8vw;
+			margin-left: 2vw;
+		}
+		.div_Head_user_Personal_signature
+		{
+			width: 32vw;
+			height: 6vw;
+			float: left;
+			margin-left: 2vw;
+		}
+		.div_Head_user_sum_picture_box
+		{
+			width: 14vw;
+			height: 7vw;
+			float: right;
+			border-radius: 2vw;
+			text-align: center;
+			margin: 6.5vw 3vw 0 0;
+			line-height: 7vw;
+			background-color: #BBBBBB;
+		}
+		.div_Head_user_sum_picture_box span
+		{
+			color: white;
+			font-size: 3.5vw;
+		}
+		.div_content_user_like_box
+		{
+			width: 75vw;
+			height: 60%;
+			float: left;
+			margin-top: 8vw;
+			margin-left: 12.5vw;
+			border-radius: 5vw;
+			box-shadow: 1vw 1vw 5vw #777777;
+		}
+		.div_content_sider_box
+		{
+			width: 100%;
+			height: 70%;
+			float: left;
+			border-radius: 5vw 5vw 0 0;
+			overflow: hidden;
+		}
+		.div_content_sider_title_box
+		{
+			width: 100%;
+			height: 30%;
+			float: left;
+			background-color: white;
+			border-radius: 0 0 5vw 5vw;
+		}
+		.div_content_sider_title_top
+		{
+			width: 100%;
+			height: 50%;
+			float: left;
+		}
+		.div_content_sider_title_top span
+		{
+			display: block;
+			font-size: 3.5vw;
+			margin: 2vw;
+		}
+		.div_content_sider_title_bottom
+		{
+			width: 10vw;
+			height: 10vw;
+			float: right;
+			margin-right: 5vw;
+		}
+		.div_content_sider_title_bottom  img
+		{
+			display: block;
+			vertical-align: middle;
+			max-width: 100%;
+		}
+		.div_content_sider_Cross_box
+		{
+			width: 12%;
+			height: 12vw;
+			float: left;
+			margin: 6vw 0 0 44%;
+			clear: both;
+			display: block;
+			vertical-align: middle;
+			line-height: 12vw;
+			text-align: center;
+		}
+		.div_content_sider_Cross_box span
+		{
+			font-size: 14vw;
+			font-weight: 500;
+			color: white;
+		}
+	</style>
+	<body onload="event_thing()">
+		<div class="div_background_picture_box">
+			<img src="../Picture/bg_main.jpg" class="div_background_picture_style" />
+		</div>
+		<div class="div_z_index_two_box">
+			<div class="div_top_back_box" id="div_top_back_box">
+				<span class="mui-action-back mui-icon mui-icon-left-nav" style="line-height: 12vw;font-size: 6vw;" id="back"></span>
+			</div>
+			<div class="div_Head_box">
+				<div class="div_Head_user_box">
+					<div class="div_Head_user_picture">
+						<img src="../Picture/User_Head.jpg" style="max-width: 100%;height: 15vw;border-radius: 50%;" />
+					</div>
+					<div class="div_Head_user_name">
+						<span style="font-size: 4vw;font-weight: 600;color: white;">买菜必涨价</span>
+					</div>
+					<div class="div_Head_user_Personal_signature">
+						<span style="font-size: 2.5vw;font-weight: 500;color: white;">你抓不到我</span>
+					</div>
+				</div>
+				<div class="div_Head_user_sum_picture_box">
+					<span id="select_num">1</span><span> / </span><span id="all_num"></span>
+				</div>
+			</div>
+			<div class="div_content_user_like_box" id="div_content_user_like_box">
+				<div class="div_content_sider_box">
+					<div id="slider" class="mui-slider" style="width: 100%;height: 100%;">
+						<div class="mui-slider-group mui-slider-loop" style="width: 100%;height: 100%;">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate" style="width: 100%;height: 100%;">
+								<a href="#">
+									<img src="../Picture/TV_1.png" style="max-width: 100%;height: 100%;width: 100%;"/>
+								</a>
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item" style="width: 100%;height: 100%;">
+								<a href="#">
+									<img src="../Picture/TV_2.png" style="max-width: 100%;"/>
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../Picture/TV_3.png" style="max-width: 100%;"/>
+								</a>
+							</div>
+							<!-- 第三张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../Picture/TV_1.png" style="max-width: 100%;"/>
+								</a>
+							</div>
+							<!-- 第四张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../Picture/TV_1.png" style="max-width: 100%;"/>
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../Picture/TV_1.png" style="max-width: 100%;"/>
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+				</div>
+				<div class="div_content_sider_title_box" id="div_content_sider_title_box">
+					<div class="div_content_sider_title_top">
+						<span id="div_content_sider_title_top_span">这是第一个</span>
+					</div>
+					<div class="div_content_sider_title_bottom" id="div_content_sider_title_bottom">
+						<img src="../icon/Love.png"/ id="img_icon_change">
+					</div>
+				</div>
+			</div>
+			<div class="div_content_sider_Cross_box">
+				<span class="mui-icon mui-icon-closeempty"></span>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/zepto.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		mui.plusReady(function() {
+			plus.navigator.setStatusBarStyle('light');
+			document.getElementById('div_top_back_box').style.marginTop = plus.navigator.getStatusbarHeight() + 10 + 'px';
+		});
+		var div_content_user_like_box = document.getElementById('div_content_user_like_box');
+		var div_content_sider_title_box = document.getElementById('div_content_sider_title_box');
+		var div_content_sider_title_bottom = document.getElementById('div_content_sider_title_bottom');
+		var select_num = document.getElementById('select_num');
+		var all_num = document.getElementById('all_num');
+		var div_content_sider_title_top_span = document.getElementById('div_content_sider_title_top_span');
+		var title_span = new Array("这是第一个","这是第二个","这是第三个","这是第四个");
+		div_content_sider_title_bottom.style.marginTop = ((div_content_sider_title_box.clientHeight / 2) -
+			div_content_sider_title_bottom.clientHeight) / 2 + 'px';
+		if (window.screen.width == 320) {
+			div_content_user_like_box.style.marginTop = 6 + 'vw';
+			div_content_user_like_box.style.width = 64 + 'vw';
+			div_content_user_like_box.style.marginLeft = 18 + 'vw';
+		}
+		function event_thing(event)
+		{
+			all_num.innerText =  $(".mui-slider-group").children().length - 2;
+			document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+					all_num.innerText =  $(".mui-slider-group").children().length - 2;
+					select_num.innerText = event.detail.slideNumber + 1;
+					div_content_sider_title_top_span.innerText = title_span[select_num.innerText - 1];
+			});
+		}
+		var i = 0;
+			document.getElementById('img_icon_change').addEventListener('tap',function(){
+				if(i == 0)
+				{
+					img_icon_change.src = "../icon/Like.png";
+					i = 1;
+				}
+				else if(i == 1)
+				{
+					img_icon_change.src = "../icon/Love.png";
+					i = 0;
+				}
+			});
+	</script>
+</html>

@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+	<style>
+		.mui-col-xs-4
+		{
+			float: left;
+		}
+		.mui-search .mui-placeholder 
+		{ 
+			font-size: 3.5vw;
+			text-align: left;
+			font-weight: 600;
+			line-height: 9vw;
+		}
+		.mui-col-xs-6
+		{
+			float: left;
+		}
+		body
+		{
+			text-align: center;
+		}
+		.mui-segmented-control.mui-scroll-wrapper .mui-control-item
+		{
+			padding: 0;
+		}
+		.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active
+		{
+			color: red;
+			border-bottom: 0px solid #007aff;
+			margin: 0;
+			padding: 0;
+		}
+		.div_top_serach_box
+		{
+			width: 100%;
+			height:9vw;
+			float: left;
+			line-height: 9vw;
+			background-color:transparent;
+		}
+		.div_top_serach_right_meun_box
+		{
+			width: 40%;
+			margin-left: 2.5%;
+			height: 9vw;
+			float: left;
+			line-height: 9vw;
+		}
+		.div_top_serach_right_meun_box_sub_div
+		{
+			width: 18%;
+			height: 7.2vw;
+			float: left;
+			line-height: 9vw;
+		}
+		.div_center_Main_content_introduction_box
+		{
+			width: 90%;
+			height: auto;
+			float: left;
+			margin-left: 5%;
+			margin-top: 5vw;
+		}
+		.div_center_Main_content_introduction_box_picture_box
+		{
+			width: 100%;
+			height: 60vw;
+			float: left;
+			box-shadow: 0 0 20px #555555;
+			border-radius: 4vw;
+		}
+		.div_center_Main_content_introduction_box_picture_down_font_style
+		{
+			width: 100%;
+			height: 10vw;
+			float: left;
+			margin-top: 2vw;
+			line-height: 10vw;
+		}
+		.center_p_style
+		{
+			float: left;
+			margin-left: 5%;
+			font-size: 4vw;
+			margin-top: 2vw;
+			color: red;
+			font-weight: 600;
+		}
+		.div_center_Hot_today_top_box
+		{
+			width: 90%;
+			float: left;
+			margin-left: 5%;
+		}
+	</style>
+	<body>
+		<div class="mui-content" id="content_herder">
+			<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="width: 80%;float: left;margin-left: 10%;">
+				<a class="mui-control-item mui-active" style="width: 20%;">
+					精选
+				</a>
+				<a class="mui-control-item" style="width: 20%;">
+					影视
+				</a>
+				<a class="mui-control-item" style="width: 20%;" id="Good_book">
+					好书
+				</a>
+				<a class="mui-control-item" style="width: 20%;">
+					故事
+				</a>
+				<a class="mui-control-item" style="width: 20%;" id="Dynamic">
+					动态
+				</a>
+			</div>
+			<div class="div_top_serach_box">
+				<div class="mui-input-row mui-search" style="border-radius: 2vw;width: 55%;margin-left: 2.5%;background-color:transparent;float: left;">
+					<input type="search" class="mui-input-clear" placeholder="红军来了热血电影[热搜]" style="height: 9vw;padding: 0;margin: 0;">
+				</div>
+				<div class="div_top_serach_right_meun_box">
+					<div class="div_top_serach_right_meun_box_sub_div">
+						<img src="icon/classification.png" style="max-width: 100%;height: 100%;width: 100%;margin-top: 0.9vw;" />
+					</div>
+					<span style="font-size: 4vw;color: #ACACB4;margin-left: 2%;float: left;">分类</span>
+					<div class="div_top_serach_right_meun_box_sub_div" style="margin-left: 5%;">
+						<img src="icon/history.png" style="max-width: 100%;height: 100%;width: 100%;margin-top: 0.9vw;" />
+					</div>
+					<span style="font-size: 4vw;color: #ACACB4;float:left;margin-left: 2%;">历史</span>
+				</div>
+			</div>
+			<div class="div_center_Main_content_introduction_box">
+				<div class="div_center_Main_content_introduction_box_picture_box">
+					<img src="Picture/yinji6.png" style="width: 100%;height: 100%;max-width: 100%;border-radius: 4vw;"/>
+				</div>
+				<div class="div_center_Main_content_introduction_box_picture_down_font_style">
+					<span style="float: left;font-size: 4vw;font-weight: 600;color: #555555;">【红星照耀中国】不能被磨灭的激昂史诗!</span>
+				</div>
+			</div>
+			<p class="center_p_style">今日热推</p>
+			<div class="div_center_Hot_today_top_box">
+				<div class="row">
+					<div class="mui-col-xs-4">
+						<img src="Picture/yinji8.png" style="max-width: 100%;height: 20vw;width: 95%;border-radius: 2.5vw;"/>
+					</div>
+					<div class="mui-col-xs-4">
+						<img src="Picture/yinji9.png" style="max-width: 100%;height: 20vw;width: 95%;border-radius: 2.5vw;"/>
+					</div>
+					<div class="mui-col-xs-4">
+						<img src="Picture/yijin10.png" style="max-width: 100%;height: 20vw;width: 95%;border-radius: 2.5vw;"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="mui-col-xs-4" id="Hot_today_span_style_one">
+						<span style="font-size: 3vw;float: left;margin: 0;padding: 0;">89岁老红军向牺牲战友敬献花篮</span>
+					</div>
+					<div class="mui-col-xs-4" id="Hot_today_span_style_two">
+						<span style="font-size: 3vw;float: left;">开展“追忆红军感恩节”活动节”活动</span>
+					</div>
+					<div class="mui-col-xs-4" id="Hot_today_span_style_three">
+						<span style="font-size: 3vw;float: left;">熊孩子当兵记|我是红军小战士</span>
+					</div>
+				</div>
+			</div>
+			<p class="center_p_style">经典热播</p>
+			<div class="div_center_Hot_today_top_box">
+				<div class="row">
+					<div class="mui-col-xs-4">
+						<img src="Picture/TV_3.png" style="max-width: 100%;height: 40vw;width: 95%;border-radius: 2.5vw;"/>
+					</div>
+					<div class="mui-col-xs-4">
+						<img src="Picture/TV_1.png" style="max-width: 100%;height: 40vw;width: 95%;border-radius: 2.5vw;"/>
+					</div>
+					<div class="mui-col-xs-4">
+						<img src="Picture/TV_2.png" style="max-width: 100%;height: 40vw;width: 95%;border-radius: 2.5vw;"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="mui-col-xs-4" id="Classic_hits_span_style_one">
+						<span style="font-size: 3.5vw;margin: 0;padding: 0;">十送红军</span>
+					</div>
+					<div class="mui-col-xs-4" id="Classic_hits_span_style_two">
+						<span style="font-size: 3.5vw;margin: 0;padding: 0;">红军来了</span>
+					</div>
+					<div class="mui-col-xs-4" id="Classic_hits_span_style_three">
+						<span style="font-size: 3.5vw;margin: 0;padding: 0;">惊沙</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		var content_herder = document.getElementById('content_herder');
+		var Hot_today_span_style_one = document.getElementById('Hot_today_span_style_one');
+		var Hot_today_span_style_two = document.getElementById('Hot_today_span_style_two');
+		var Hot_today_span_style_three = document.getElementById('Hot_today_span_style_three');
+		var Classic_hits_span_style_one = document.getElementById('Classic_hits_span_style_one');
+		var Classic_hits_span_style_two = document.getElementById('Classic_hits_span_style_two');
+		var Classic_hits_span_style_three = document.getElementById('Classic_hits_span_style_three')
+		Hot_today_span_style_one.style.lineHeight = Hot_today_span_style_one.clientHeight / 8 + 'vw';
+		Hot_today_span_style_two.style.lineHeight = Hot_today_span_style_two.clientHeight / 8 + 'vw';
+		Hot_today_span_style_three.style.lineHeight = Hot_today_span_style_three.clientHeight / 8 + 'vw';
+		Classic_hits_span_style_one.style.lineHeight = Classic_hits_span_style_one.clientHeight / 8 + 'vw';
+		Classic_hits_span_style_two.style.lineHeight = Classic_hits_span_style_two.clientHeight / 8 + 'vw';
+		Classic_hits_span_style_three.style.lineHeight = Classic_hits_span_style_three.clientHeight / 8 + 'vw';
+		mui.plusReady(function() {
+			content_herder.style.marginTop = plus.navigator.getStatusbarHeight() + 'px';
+			plus.navigator.setStatusBarStyle('dark');
+			document.getElementById('Good_book').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_Imprint/Good_Book.html',
+					id:'Main_Imprint/Good_Book.html',
+				});
+			});
+			document.getElementById('Dynamic').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_Imprint/Dynamic.html',
+					id:'Main_Imprint/Dynamic.html',
+				});
+			});
+			plus.navigator.setStatusBarStyle('dark');
+		});
+	</script>
+</html>

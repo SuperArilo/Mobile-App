@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		.mui-card
+		{
+			box-shadow: 0px 0px 0px #413D4A;
+			background-color:	#B0C4DE;
+			margin: 0;
+			padding: 0;
+			opacity:0.9;
+		}
+		.div_card_header_box
+		{
+			width: 50vw;
+			height: 15vw;
+			float: left;
+		}
+		.div_card_header_user_head_picture
+		{
+			width: 15vw;
+			height: 15vw;
+			float: left;
+			border-radius: 50%;
+		}
+		.div_card_header_right_box
+		{
+			width: 30vw;
+			height: 15vw;
+			float: left;
+			margin-left: 5vw;
+		}
+		.div_card_header_right_user_name_box
+		{
+			width: 100%;
+			height: 8.5vw;
+			float: left;
+			line-height: 8.5vw;
+		}
+		.div_card_header_right_user_name_span_font_style
+		{
+			float: left;
+			line-height: 8.5vw;
+			font-size: 4vw;
+			color: #000000;
+			font-weight: 600;
+		}
+		.div_card_header_right_user_Release_time_box
+		{
+			width: 100%;
+			height: 6.5vw;
+			float: left;
+			line-height: 6.5vw;
+		}
+		.div_card_header_right_user_Release_time_span_font_style
+		{
+			font-size: 3vw;
+			color: #999999;
+			float: left;
+			line-height: 6.5vw;
+		}
+		.div_card_header_right_buttom
+		{
+			width: 12vw;
+			height: 6vw;
+			float: right;
+			border-radius: 1vw;
+			line-height: 6vw;
+		}
+		.div_card_content_title_box
+		{
+			width: 100%;
+			height: 6vw;
+			float: left;
+			line-height: 6vw;
+		}
+		.div_card_content_picture_box
+		{
+			width: 100%;
+			height: 22vw;
+			float: left;
+			margin-top: 2vw;
+		}
+		.div_card_content_picture_alone_div
+		{
+			width: 28%;
+			height: 22vw;
+			float: left;
+			margin-left: 4%;
+		}
+		.div_card_content_picture_style
+		{
+			max-width: 100%;
+			height: 100%;
+			width: 100%;
+			border-radius: 2vw;
+		}
+		.div_card_footer_right_box
+		{
+			width: 25vw;
+			height: 10vw;
+			float: right;
+			line-height: 10vw;
+		}
+		.div_absolute_left_box
+		{
+			width: 15vw;
+			height: 15vw;
+			position: absolute;
+			bottom: 8vh;
+			background-color: #AAAAAA;
+			left: 5vw;
+			border-radius: 50%;
+			line-height: 15vw;
+			text-align: center;
+			box-shadow: 1vw 1vw 5vw #999999;
+			z-index: 2;
+		}
+		.div_absolute_right_box
+		{
+			position: absolute;
+			width: 28vw;
+			height: 15vw;
+			right: 0vw;
+			bottom: 8vh;
+			border-radius: 10vw 0 0 10vw;
+			line-height: 15vw;
+			text-align: center;
+			box-shadow: 1vw 1vw 5vw #999999;
+			background-color: #AAAAAA;
+			z-index: 2;
+		}
+	</style>
+	<body>
+		<!-- <div id="div_picture_style" style="position: absolute;z-index: 1;height: 100%;width: 100%;line-height: 100%;">
+			<img src="../../Picture/zhoubian5.jpg" style="filter: blur(2vw);z-index: 1;position: absolute;max-width: 100%;height: 100%;width: 100%;" />
+		</div> -->
+		<header class="mui-bar mui-bar-nav" style="box-shadow: 0px 0px 0px #413D4A;background-color:transparent;position: relative;"id="heardermylab">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"></a>
+		</header>
+		<!-- <div class="mui-card" style="border-radius: 3vw;margin-top: 44px;z-index: 2;margin: 0;height: 65vw;padding: 0;" id="mui_card">
+			<div class="mui-card-header">
+				<div class="div_card_header_box">
+					<div class="div_card_header_user_head_picture">
+						<img src="../../Picture/User_Head.jpg" style="max-width: 100%;border-radius: 50%;" />
+					</div>
+					<div class="div_card_header_right_box">
+						<div class="div_card_header_right_user_name_box">
+							<span class="div_card_header_right_user_name_span_font_style">妮妮小姐</span>
+						</div>
+						<div class="div_card_header_right_user_Release_time_box">
+							<span class="div_card_header_right_user_Release_time_span_font_style">10分钟之前发布</span>
+						</div>
+					</div>
+				</div>
+				<div class="div_card_header_right_buttom">
+					<button type="button" class="mui-btn mui-btn-red" style="width: 12vw;height: 6vw;float: left;line-height: 6vw;margin: 0;padding: 0;border-radius: 1vw;"><span
+						 style="font-size: 3vw;line-height: 6vw;">关注</span></button>
+				</div>
+			</div>
+			<div class="mui-card-content">
+				<div class="div_card_content_title_box">
+					<p style="font-size: 3.3vw;margin-left: 5vw;">走红军之路，守红色初心,建时代新功!</p>
+				</div>
+				<div class="div_card_content_picture_box">
+					<div class="div_card_content_picture_alone_div">
+						<img src="../../Picture/yinji4.png" class="div_card_content_picture_style" />
+					</div>
+					<div class="div_card_content_picture_alone_div">
+						<img src="../../Picture/yinji1.png" class="div_card_content_picture_style" />
+					</div>
+					<div class="div_card_content_picture_alone_div">
+						<img src="../../Picture/yinji5.png" class="div_card_content_picture_style" />
+					</div>
+				</div>
+			</div>
+			<div class="mui-card-footer" style="float: right;margin: 0;padding: 0;">
+				<div class="div_card_footer_right_box">
+					<span style="font-size: 3.5vw;">6.4万人 阅读</span>
+				</div>
+			</div>
+		</div> -->
+		<!-- <div class="div_absolute_left_box" id="div_absolute_left_box">
+			<img src="../../icon/Like.png" style="max-width: 60%;vertical-align: middle;" />
+		</div>
+		<div class="div_absolute_left_box" style="left: 28vw;">
+			<img src="../../icon/User_Need.png" style="max-width: 60%;vertical-align: middle;" />
+		</div>
+		<div class="div_absolute_right_box">
+			<span style="font-size: 4.5vw;color: white;">NEXT ></span>
+		</div>
+		<div style="width: 100%;height: 8vh;position: absolute;bottom: 0;z-index: 5;background-color: #0077AA;" id="tool_div">
+			
+		</div>
+	</body> -->
+	<script src="../../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		mui.plusReady(function () {
+		    plus.navigator.setStatusBarStyle('dark');
+		});
+	</script>
+</html>

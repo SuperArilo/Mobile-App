@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "564943",
+      "name": "star",
+      "font_class": "star",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "1011812",
+      "name": "comment",
+      "font_class": "comment",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "10928234",
+      "name": "share",
+      "font_class": "share",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    }
+  ]
+}

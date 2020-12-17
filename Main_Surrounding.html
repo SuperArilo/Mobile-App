@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+	<style>
+		.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active
+		{
+			border-bottom: 0px solid #007aff;
+		}
+		.mui-segmented-control.mui-scroll-wrapper .mui-control-item
+		{
+			padding: 0;
+		}
+		.mui-col-xs-4
+		{
+			float: left;
+		}
+		body
+		{
+			text-align: center;
+			background-color: white;
+		}
+		.Main_div_content_box
+		{
+			width: 100%;
+			height: auto;
+			float: left;
+			background-color:white;
+			margin-top: 48.4vw;
+			z-index: 999999;
+			position: relative;
+			border-radius: 8vw 8vw 0 0;
+		}
+		.Main_div_content_box_item_three_box
+		{
+			position: absolute;
+			width: 90%;
+			height: 18vw;
+		}
+		.Main_div_content_box_item_three_box_right_icon_div
+		{
+			width: 90%;
+			height: 7vw;
+			margin-top: 3vw;
+			line-height: 7vw;
+			float: left;
+		}
+		.Main_div_content_box_item_three_box_down_span_box
+		{
+			float: left;
+			width: 100%;
+			height: 6vw;
+			line-height: 6vw;
+		}
+		.item_three_box_right_icon_span
+		{
+			float: left;
+			font-size: 4vw;
+			color: white;
+			margin-left: 5%;
+			font-weight: 600;
+		}
+		.item_three_box_right_icon_change_color_style
+		{
+			font-size: 5vw;
+			float: right;
+			line-height: 7vw;
+			color: white;
+		}
+		.item_three_box_right_icon_span_next_down_span
+		{
+			font-size: 3.2vw;
+			float: left;
+			margin-left: 5%;
+			color: white;
+		}
+		.center_p_style
+		{
+			float: left;
+			margin-top: 7vw;
+			margin-left: 5.1vw;
+			color: black;
+			font-size: 3.8vw;
+			font-weight: 600;
+		}
+		.Revolutionary_tourist_attractions_nearby_div_box
+		{
+			width: 90%;
+			height: auto;
+			float: left;
+			margin-top: 2.5vw;
+			margin-left: 5%;
+		}
+		.Revolutionary_tourist_attractions_nearby_div_box_left_and_right_box
+		{
+			width: 47.5%;
+			height: 34vw;
+			float: left;
+			background-color:#FAFAFA;
+			box-shadow: 0 0 10px #AAAAAA;
+			border-radius: 2vw 2vw 2vw 2vw;
+		}
+		.Revolutionary_tourist_attractions_nearby_div_box_left_and_right_box_top_font_and_icon_box
+		{
+			width: 100%;
+			height: 8vw;
+			float: left;
+			line-height: 8vw;
+		}
+		.Revolutionary_tourist_attractions_nearby_div_box_left_and_right_box_bottom_picture_box
+		{
+			width: 100%;
+			height: 26vw;
+			float: left;
+			border-radius:0 0 2vw 2vw;
+		}
+		.Nearby_museum_div_box
+		{
+			width: 90%;
+			height: auto;
+			float: left;
+			margin-top: 2.5vw;
+			margin-left: 5%;
+		}
+		.Nearby_museum_div_box_left_and_right_box
+		{
+			width: 47.5%;
+			height: 34vw;
+			float: left;
+			background-color:#FAFAFA;
+			box-shadow: 0 0 10px #AAAAAA;
+			border-radius: 2vw 2vw 2vw 2vw;
+		}
+		.Nearby_museum_div_box_left_and_right_box_top_font_and_icon_box
+		{
+			width: 100%;
+			height: 8vw;
+			float: left;
+			line-height: 8vw;
+		}
+		.Nearby_museum_div_box_left_and_right_box_bottom_picture_box
+		{
+			width: 100%;
+			height: 26vw;
+			float: left;
+			border-radius:0 0 2vw 2vw;
+		}
+		.Revolution_theme_commemorative_coin_div_box
+		{
+			width: 90%;
+			height: auto;
+			float: left;
+			margin-top: 2.5vw;
+			margin-left: 5%;
+		}
+		.Revolution_theme_commemorative_coin_div_box_left_and_right_box
+		{
+			width: 47.5%;
+			height: 34vw;
+			float: left;
+			background-color:#FAFAFA;
+			box-shadow: 0 0 10px #AAAAAA;
+			border-radius: 2vw 2vw 2vw 2vw;
+		}
+		.Revolution_theme_commemorative_coin_div_box_left_and_right_box_top_font_and_icon_box
+		{
+			width: 100%;
+			height: 8vw;
+			float: left;
+			line-height: 8vw;
+		}
+		.Revolution_theme_commemorative_coin_div_box_left_and_right_box_bottom_picture_box
+		{
+			width: 100%;
+			height: 26vw;
+			float: left;
+			border-radius:0 0 2vw 2vw;
+		}
+	</style>
+	<body>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider" style="position: absolute;top: 0;z-index: 8;">
+				<div class="mui-slider-group mui-slider-loop">
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="Lunbo/lunbo4.jpg" />
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="Lunbo/lunbo1.jpg" />
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="Lunbo/lunbo2.jpg" />
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="Lunbo/lunbo3.jpg" />
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="Lunbo/lunbo4.jpg" />
+						</a>
+					</div>
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="Lunbo/lunbo1.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator" style="margin-bottom: 20vw;">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<div class="Main_div_content_box">
+				<div class="row" style="margin-top: 10vw;">
+					<div class="mui-col-xs-4" id="Museum_One">
+						<img src="Picture/bg_main.jpg" style="max-width: 100%;height: 18vw;width: 85%;float: left;margin-left: 5.1vw;border-radius: 10px;"/>
+						<div class="Main_div_content_box_item_three_box" style="left: 5.1vw;">
+							<div class="Main_div_content_box_item_three_box_right_icon_div">
+								<span class="item_three_box_right_icon_span">旅游景点</span><span class="mui-icon mui-icon-arrowright item_three_box_right_icon_change_color_style"></span>
+							</div>
+							<div class="Main_div_content_box_item_three_box_down_span_box">
+								<span class="item_three_box_right_icon_span_next_down_span">周边革命景区</span>
+							</div>
+						</div>
+					</div>
+					<div class="mui-col-xs-4" id="Museum_Two">
+						<img src="Picture/bg_main.jpg" style="max-width: 100%;height: 18vw;width: 85%;border-radius: 10px;float: left;margin-left: 7.5%;"/>
+						<div class="Main_div_content_box_item_three_box" style="left: 2.5vw;">
+							<div class="Main_div_content_box_item_three_box_right_icon_div">
+								<span class="item_three_box_right_icon_span">博物馆</span><span class="mui-icon mui-icon-arrowright item_three_box_right_icon_change_color_style"></span>
+							</div>
+							<div class="Main_div_content_box_item_three_box_down_span_box">
+								<span class="item_three_box_right_icon_span_next_down_span">周边革命博物馆</span>
+							</div>
+						</div>
+					</div>
+					<div class="mui-col-xs-4" id="Museum_Three">
+						<img src="Picture/bg_main.jpg" style="max-width: 100%;height: 18vw;width: 85%;float: left;border-radius: 10px;"/>
+						<div class="Main_div_content_box_item_three_box">
+							<div class="Main_div_content_box_item_three_box_right_icon_div">
+								<span class="item_three_box_right_icon_span">纪念币</span><span class="mui-icon mui-icon-arrowright item_three_box_right_icon_change_color_style"></span>
+							</div>
+							<div class="Main_div_content_box_item_three_box_down_span_box">
+								<span class="item_three_box_right_icon_span_next_down_span">革命主题纪念币</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="center_p_style">附近革命旅游景区</p>
+				<div class="Revolutionary_tourist_attractions_nearby_div_box">
+					<div class="Revolutionary_tourist_attractions_nearby_div_box_left_and_right_box">
+						<div class="Revolutionary_tourist_attractions_nearby_div_box_left_and_right_box_top_font_and_icon_box">
+							<span style="margin: 0;padding: 0;float: left;color: #000000;font-size: 3.2vw;margin-left: 3vw;">天安门广场</span>
+							<span class="mui-icon mui-icon-arrowright" style="font-size: 4vw;float: right;line-height: 8vw;"></span>
+						</div>
+						<div class="Revolutionary_tourist_attractions_nearby_div_box_left_and_right_box_bottom_picture_box">
+							<img src="Picture/zhoubian1.jpg" style="max-width: 100%;height: 100%;width: 100%;border-radius:0 0 2vw 2vw;"/>
+						</div>
+					</div>
+					<div class="Revolutionary_tourist_attractions_nearby_div_box_left_and_right_box" style="margin-left: 5%;">
+						<div class="Revolutionary_tourist_attractions_nearby_div_box_left_and_right_box_top_font_and_icon_box">
+							<span style="margin: 0;padding: 0;float: left;color: #000000;font-size: 3.2vw;margin-left: 3vw;">圆明园遗址公园</span>
+							<span class="mui-icon mui-icon-arrowright" style="font-size: 4vw;float: right;line-height: 8vw;"></span>
+						</div>
+						<div class="Revolutionary_tourist_attractions_nearby_div_box_left_and_right_box_bottom_picture_box">
+							<img src="Picture/zhoubian6.jpg" style="max-width: 100%;height: 100%;width: 100%;border-radius:0 0 2vw 2vw;"/>
+						</div>
+					</div>
+				</div>
+				<p class="center_p_style">附近博物馆</p>
+				<div class="Nearby_museum_div_box">
+					<div class="Nearby_museum_div_box_left_and_right_box">
+						<div class="Nearby_museum_div_box_left_and_right_box_top_font_and_icon_box">
+							<span style="float: left;color: #000000;font-size: 3.2vw;margin-left: 3vw;">中国人民抗日战争纪念馆</span>
+							<span class="mui-icon mui-icon-arrowright" style="font-size: 4vw;float: right;line-height: 8vw;"></span>
+						</div>
+						<div class="Nearby_museum_div_box_left_and_right_box_bottom_picture_box">
+							<img src="Picture/zhoubian9.jpg" style="max-width: 100%;height: 100%;width: 100%;border-radius:0 0 2vw 2vw;"/>
+						</div>
+					</div>
+					<div class="Nearby_museum_div_box_left_and_right_box" style="margin-left: 5%;">
+						<div class="Nearby_museum_div_box_left_and_right_box_top_font_and_icon_box">
+							<span style="margin: 0;padding: 0;float: left;color: #000000;font-size: 3.2vw;margin-left: 3vw;">中国人民革命军事博物馆</span>
+							<span class="mui-icon mui-icon-arrowright" style="font-size: 4vw;float: right;line-height: 8vw;"></span>
+						</div>
+						<div class="Nearby_museum_div_box_left_and_right_box_bottom_picture_box">
+							<img src="Picture/zhoubian2.jpg" style="max-width: 100%;height: 100%;width: 100%;border-radius:0 0 2vw 2vw;"/>
+						</div>
+					</div>
+				</div>
+				<p class="center_p_style">革命主题纪念币</p>
+				<div class="Revolution_theme_commemorative_coin_div_box">
+					<div class="Revolution_theme_commemorative_coin_div_box_left_and_right_box">
+						<div class="Revolution_theme_commemorative_coin_div_box_left_and_right_box_top_font_and_icon_box">
+							<span style="float: left;color: #000000;font-size: 3.2vw;margin-left: 3vw;">辛亥革命纪念币</span>
+							<span class="mui-icon mui-icon-arrowright" style="font-size: 4vw;float: right;line-height: 8vw;"></span>
+						</div>
+						<div class="Revolution_theme_commemorative_coin_div_box_left_and_right_box_bottom_picture_box">
+							<img src="Picture/zhoubian7.jpg" style="max-width: 100%;height: 100%;width: 100%;border-radius:0 0 2vw 2vw;"/>
+						</div>
+					</div>
+					<div class="Revolution_theme_commemorative_coin_div_box_left_and_right_box" style="margin-left: 5%;">
+						<div class="Revolution_theme_commemorative_coin_div_box_left_and_right_box_top_font_and_icon_box">
+							<span style="margin: 0;padding: 0;float: left;color: #000000;font-size: 3.2vw;margin-left: 3vw;">抗战胜利70周年纪念币</span>
+							<span class="mui-icon mui-icon-arrowright" style="font-size: 4vw;float: right;line-height: 8vw;"></span>
+						</div>
+						<div class="Revolution_theme_commemorative_coin_div_box_left_and_right_box_bottom_picture_box">
+							<img src="Picture/zhoubian3.jpg" style="max-width: 100%;height: 100%;width: 100%;border-radius:0 0 2vw 2vw;"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		mui.plusReady(function() {
+			document.getElementById('Museum_Two').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_Surrounding/Nearby_Museum.html',
+					id:'Main_Surrounding/Nearby_Museum.html',
+				});
+			});
+			document.getElementById('Museum_One').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_Surrounding/Nearby_revolutionary_scenic_spot.html',
+					id:'Main_Surrounding/Nearby_revolutionary_scenic_spot.html',
+				});
+			});
+			document.getElementById('Museum_Three').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'Main_Surrounding/commemorative_coin.html',
+					id:'Main_Surrounding/commemorative_coin.html',
+				});
+			});
+		});
+	</script>
+</html>

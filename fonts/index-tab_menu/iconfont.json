@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "694724",
+      "name": "周边",
+      "font_class": "round",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "2510100",
+      "name": "index-o",
+      "font_class": "index-o",
+      "unicode": "e76c",
+      "unicode_decimal": 59244
+    },
+    {
+      "icon_id": "5392460",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "11537857",
+      "name": "star",
+      "font_class": "star",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    }
+  ]
+}

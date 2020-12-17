@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		.heardermylab
+		{
+			width: 100%;
+			float: left;
+			position: fixed;
+			height: auto;
+		}
+		.heardermylab_div_top_box
+		{
+			width: 100%;
+			float: left;
+			height: auto;
+			background-color: white;
+		}
+		.heardermylab_content_box
+		{
+			width: 100%;
+			height: 12vw;
+			float: left;
+			background-color: white;
+			line-height: 12vw;
+			text-align: center;
+		}
+		.heardermylab_content_box a
+		{
+			color:#000000;
+			line-height: 12vw;
+			position: absolute;
+			left: 3vw;
+		}
+		.heardermylab_content_box span
+		{
+			text-align: center;
+			color: #000000;
+			font-size: 5vw;
+			font-weight: 600;
+		}
+		.div_content
+		{
+			width: 100%;
+			height: 14vw;
+			float: left;
+			background-color: white;
+		}
+		.div_content_left_box
+		{
+			width: 30%;
+			height: 14vw;
+			float: left;
+			margin-left: 5vw;
+			line-height: 14vw;
+		}
+		.div_content_left_box span
+		{
+			font-size: 4vw;
+		}
+		.div_content_right_box
+		{
+			width: 30%;
+			height: 14vw;
+			float: right;
+		}
+		.div_content_right_span_box
+		{
+			width: 74%;
+			height: 14vw;
+			float: left;
+			line-height: 14vw;
+			text-align: right;
+		}
+		.div_content_right_span_box span
+		{
+			font-size: 4vw;
+		}
+		.div_content_right_cross_box
+		{
+			width: 20%;
+			height: 14vw;
+			float: left;
+			margin-left: 3%;
+			line-height: 14vw;
+			text-align: center;
+		}
+		.div_content_right_cross_box span
+		{
+			font-size: 5vw;
+			font-weight: 600;
+		}
+		.hidden_div
+		{
+			width: 100%;
+			height: 62vw;
+			float: left;
+			background-color: white;
+			position: relative;
+			z-index: -1;
+		}
+		.hidden_div_animation_appear
+		{
+			animation: hidden_div_animation_appear 0.4s;
+		}
+		@keyframes hidden_div_animation_appear
+		{
+			from{top: -62vw;}
+			to{top: 0vw;}
+		}
+		.hidden_div_animation_disappear
+		{
+			animation: hidden_div_animation_disappear 0.4s;
+		}
+		@keyframes hidden_div_animation_disappear
+		{
+			from{top: 0vw;}
+			to{top: -62vw;}
+		}
+		.hidden_div_sub_box
+		{
+			width: 85%;
+			height: 10vw;
+			float: left;
+			margin-left: 7.5%;
+			margin-top: 2vw;
+			line-height: 10vw;
+			border-bottom: solid 1px #CCCCCC;
+		}
+		.hidden_div_sub_box span
+		{
+			font-size: 3.8vw;
+			margin-left: 2.5vw;
+		}
+		.hidden_div_sub_box:active
+		{
+			background-color: #CCCCCC;
+		}
+		.div_leave_box
+		{
+			width: 100%;
+			height: auto;
+			float: left;
+			position: relative;
+		}
+		.div_leave_box_come
+		{
+			animation: div_leave_box_come 0.4s;
+		}
+		@keyframes div_leave_box_come
+		{
+			from{top: 0;}
+			to{top: 62vw;}
+		}
+		.div_leave_box_back
+		{
+			animation: div_leave_box_back 0.4s;
+		}
+		@keyframes div_leave_box_back
+		{
+			from{top: 62vw;}
+			to{top: 0;}
+		}
+		.div_leave_box_input_box
+		{
+			width: 85%;
+			height:35vw;
+			float: left;
+			background-color: white;
+			margin: 5vw 0 0 7.5%;
+			border-radius: 5vw;
+			box-shadow: 0 0 3vw #AAAAAA;
+		}
+		.warp
+		{
+		    display: inline-block;
+		    vertical-align: bottom;
+		    position: relative;
+		}
+		.warp-content 
+		{
+			background-color: white;
+		    width: 20vw;
+		    height: 20vw;
+		    text-align: center;
+			border-radius: 2vw;
+			float: left;
+			margin-left: 5vw;
+			margin-top: 1vw;
+		}
+		img 
+		{
+			width: 20vw;
+			height: 20vw;
+			vertical-align: bottom;
+			margin-top: 1vw;
+			border-radius: 2vw;
+		}
+		.icon 
+		{
+			width: 1em;
+			height: 1em;
+			vertical-align: -0.15em;
+			fill: currentColor;
+			overflow: hidden;
+		}
+		input 
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20vw;
+			height: 20vw;
+			opacity: 0;
+			cursor: pointer;
+		}
+		.div_buttom_box
+		{
+			width: 85%;
+			height: 10vw;
+			float: left;
+			margin: 8vw 0 0 7.5%;
+			border-radius: 5vw;
+		}
+		.div_buttom_box button
+		{
+			width: 100%;
+			height: 100%;
+			border-radius: 5vw;
+			border: 0;
+			background-color: #F0AD4E;
+		}
+		.div_introduce_box
+		{
+			width: 85%;
+			height: 18vw;
+			float: left;
+			background-color: white;
+			margin: 8vw 0 0 7.5%;
+			border-radius: 3vw;
+		}
+		.div_introduce_left_box
+		{
+			width: 20vw;
+			height: 11vw;
+			float: left;
+			margin: 3.5vw 0 0 3vw;
+			border-right: solid 1px #CCCCCC;
+			line-height: 11vw;
+			text-align: center;
+		}
+		.div_introduce_left_box span
+		{
+			font-size: 3.8vw;
+			font-weight: 700;
+		}
+		.div_introduce_right_box
+		{
+			width: 56vw;
+			height: 11vw;
+			float: left;
+			margin: 3.5vw 0 0 4vw;
+			text-align: left;
+		}
+		.div_introduce_right_box span
+		{
+			display: block;
+			vertical-align: middle;
+			font-size: 3.5vw;
+			font-weight: 600;		
+		}
+	</style>
+	<body>
+		<div class="heardermylab" id="heardermylab">
+			<div class="heardermylab_div_top_box" id="div_top_box">
+
+			</div>
+			<div class="heardermylab_content_box">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<span>反馈中心</span>
+			</div>
+		</div>
+		<div id="content" class="div_content">
+			<div class="div_content_left_box">
+				<span>反馈类型</span>
+			</div>
+			<div class="div_content_right_box" id="div_content_right_box">
+				<div class="div_content_right_span_box">
+					<span>请选择</span>
+				</div>
+				<div class="div_content_right_cross_box">
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+			<div class="hidden_div mui-hidden" id="hidden_div">
+				<div class="hidden_div_sub_box">
+					<span>商城相关问题</span>
+				</div>
+				<div class="hidden_div_sub_box">
+					<span>创作者中心</span>
+				</div>
+				<div class="hidden_div_sub_box">
+					<span>商城相关问题</span>
+				</div>
+				<div class="hidden_div_sub_box">
+					<span>违规举报</span>
+				</div>
+				<div class="hidden_div_sub_box">
+					<span>账号问题</span>
+				</div>
+			</div>
+		</div>
+		<div class="div_leave_box" id="div_leave_box">
+			<div class="div_leave_box_input_box">
+				<textarea id="subject" name="subject" placeholder="点击填写反馈内容" style="width: 100%;height: 100%;"></textarea>
+			</div>
+			<div style="width: 90%;height: 30vw;float: left;margin: 5vw 0 0 5%;">
+				<p style="margin: 1vw 0 0 2vw">上传图片</p>
+				<div class="warp">
+					<div class="warp-content ">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-jiahaocu"></use>
+						</svg>
+					</div>
+					<div style="width: 10vw;height: 10vw;float: left;">
+						<input type="file" id="file" />
+					</div>
+					<div style="width: 15vw;height: 15vw;float: left;">
+						<img src="" />
+					</div>
+				</div>
+			</div>
+			<div class="div_buttom_box">
+				<button type="button" class="mui-btn">反馈</button>
+			</div>
+			<div class="div_introduce_box">
+				<div class="div_introduce_left_box">
+					<span>反馈说明</span>
+				</div>
+				<div class="div_introduce_right_box">
+					<span>反馈问题后，我们的客服人员竟在10-30分钟内与您联系，请留言</span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		var heardermylab = document.getElementById('heardermylab');
+		var div_top_box = document.getElementById('div_top_box');
+		var div_Center_content_box = document.getElementById('div_Center_content_box');
+		var content = document.getElementById('content');
+		var hidden_div = document.getElementById('hidden_div');
+		var div_leave_box = document.getElementById('div_leave_box');
+		var change_value = 0;
+		document.getElementById('div_content_right_box').addEventListener('tap', function() {
+			if (change_value == 0) {
+				hidden_div.classList.remove('hidden_div_animation_disappear');
+				hidden_div.classList.remove('mui-hidden');
+				div_leave_box.classList.remove('div_leave_box_back');
+				hidden_div.classList.add('hidden_div_animation_appear');
+				div_leave_box.classList.add('div_leave_box_come');
+				setTimeout(function() {
+					div_leave_box.style.marginTop = hidden_div.clientHeight + 'px';
+				}, 400);
+				change_value = 1;
+			} else if (change_value == 1) {
+				div_leave_box.classList.remove('div_leave_box_come');
+				hidden_div.classList.remove('hidden_div_animation_appear');
+				hidden_div.classList.add('hidden_div_animation_disappear');
+				div_leave_box.classList.add('div_leave_box_back');
+				div_leave_box.style.marginTop = 0 + 'px';
+				change_value = 0;
+				setTimeout(function() {
+					hidden_div.classList.add('mui-hidden');
+				}, 400);
+			}
+		});
+		mui.plusReady(function() {
+			plus.navigator.setStatusBarStyle('dark');
+			div_top_box.style.height = plus.navigator.getStatusbarHeight() + 'px';
+			content.style.marginTop = heardermylab.clientHeight + 'px';
+		});
+		var file = document.getElementById('file');
+		var image = document.querySelector("img");
+		file.onchange = function() {
+			var fileData = this.files[0]; //获取到一个FileList对象中的第一个文件( File 对象),是我们上传的文件
+			var pettern = /^image/;
+			if (!pettern.test(fileData.type)) 
+			{
+				alert("图片格式不正确");
+				return;
+			}
+			var reader = new FileReader();
+			reader.readAsDataURL(fileData); //异步读取文件内容，结果用data:url的字符串形式表示
+			/*当读取操作成功完成时调用*/
+			reader.onload = function(e) {
+				console.log(e); //查看对象
+				console.log(this.result); //要的数据 这里的this指向FileReader（）对象的实例reader
+				image.setAttribute("src", this.result)
+			}
+		}
+	</script>
+</html>

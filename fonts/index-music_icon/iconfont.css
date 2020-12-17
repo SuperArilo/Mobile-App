@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1601202234400'); /* IE9 */
+  src: url('iconfont.eot?t=1601202234400#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOEAAsAAAAAB5AAAAM2AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqCTIJEATYCJAMQCwoABCAFhG0HRRuzBhHVmzHI/gCZ3OoHCEI7a2edMAHuVmLSEAh4eGH/B3c68BQkAAAAAEA8PO337dyZ+W9nTZMk0SiISjdLhCSe8JIJDbZiIeEJD3kNunk/wsI1QAsTXhuzJRh4PAnDIoz7/TV9vRKwcASKeEDslpP7tWvjBygcCofoiNyyBNQq2twM9dOYCMOUf35O35YEdnoh/OhZaGt5AVCX/zlEUHRwOf2WJTDPshx/bGqNgU8VYBxQoGMNerIC6YG4YewmyoM4TaDDuAWxMxbPQ1WASYG43t/bDjVlVmpqQxWakpVFPIGgpkf0Bjzm34+/8KOStDIw8+jFaBds/Wn5uGd+SooAG88JbR0ZCyjE5VL3WTlML8g6HGmKZVRV4qflNf1x/xdRwEatu9L3j5eIhlTdBRZFJp8YhtGYS4tGgj/3VRK8kBUVDc7gJVCPki7Joru7Y9hgn0NbhN06lx305iYmHulql9Vraf0KXbReXyeXl3iewkUk9xLjOhWjlFerKngtEX5VvLgIryiFnGOyeJSYgV2+SekYT7bOc/jSCmZNucOXGtCxV4X4Ip1Vsx0/JM/NVrBRcvdaC/fD1VXcb4Y3Io7OwP3VdK+OkivY3MwjJ7i2d7NJ0bQ9GIvCkeisSIIt3Ss1/llCQ/cdl1pGOyvw9u93fcm7CPv7YP8Jd8CaqjiYdmAAzkorFLAqX6wH5Lb0+i/9xo4f/+JWruejLQv4VF8IeHhVQXu+nrgn+CdYy7biEsBSik1i1Ksu1svcHN0BbfyJPAO+jsEPt64mVMMxJG3GIKsmZEW1AC2dFqFRbYEO8/as7zTohixKO+bcEyD0eQVJjzeQ9fkoK6ov0DLiPzT6IkOH0yHcsdNU+NWCoFHMwf6hctwTsukiqL1jMbZGkgTXvFGGKgZplGRzG+xRxpgzfIpMlYCEO1gL52HbMnjhGp1GpapfxTGViRQ57oIFCBrFHOwfKsc90d66yH3+jsXYGqkRdEzfKEM1OKRR0kK2YftWgmt5Z/gUmSoBCXewFpzYwjSDLx9Wo9Oo7JH0q1jqRm3ZaH6+e8J90AFwWyEpcpRoaVb2k0+X/S5cWibTFyjVV2MQAAAA') format('woff2'),
+  url('iconfont.woff?t=1601202234400') format('woff'),
+  url('iconfont.ttf?t=1601202234400') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1601202234400#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-stop:before {
+  content: "\e750";
+}
+
+.icon-EMOJI-:before {
+  content: "\eadb";
+}
+
+.icon-bofanganniu:before {
+  content: "\e726";
+}
+
